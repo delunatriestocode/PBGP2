@@ -16,7 +16,6 @@
         android:gravity="center"
         android:text="Cadastro"
         android:textSize="26sp"
-        android:textStyle="bold"
         android:textColor="#F4F0ED"/>
 
     <LinearLayout
@@ -24,6 +23,33 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginHorizontal="40dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inserir_nome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome"
+                android:background="#F4F0ED"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inserir_ddn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data"
+                android:background="#F4F0ED"
+                android:layout_marginTop="10dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -34,6 +60,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:hint="E-mail"
                 android:background="#F4F0ED"/>
 
@@ -58,7 +85,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_entrar"
+        android:id="@+id/btn_cadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

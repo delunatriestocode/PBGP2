@@ -16,7 +16,6 @@
         android:gravity="center"
         android:text="Login"
         android:textSize="26sp"
-        android:textStyle="bold"
         android:textColor="#F4F0ED"/>
 
     <LinearLayout
