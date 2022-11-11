@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,7 +15,7 @@
         android:layout_marginTop="100dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="Login"
+        android:text="Cadastro"
         android:textSize="26sp"
         android:textColor="#F4F0ED"/>
 
@@ -23,6 +24,33 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginHorizontal="40dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inserir_nome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome"
+                android:background="#F4F0ED"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inserir_ddn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data"
+                android:background="#F4F0ED"
+                android:layout_marginTop="10dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -33,6 +61,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:hint="E-mail"
                 android:background="#F4F0ED"/>
 
@@ -57,12 +86,12 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_entrar"
+        android:id="@+id/btn_cadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#217B80"
-        android:text="     Entrar     "
+        android:text="     Cadastrar     "
         android:textColor="#F4F0ED"
         android:layout_marginTop="50dp"
         />
@@ -72,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Não tenho conta"
+        android:text="Já tenho uma conta!"
         android:textColor="#F4F0ED"
         android:layout_marginTop="280dp"
         android:layout_gravity="center">
