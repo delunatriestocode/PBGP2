@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_weight="1"
-            android:text="R$ aaa,aa"
+            android:text="R$ bbb,bb"
             android:textAlignment="center"
             android:textColor="#E0E0E0"
             android:textSize="18sp" />
