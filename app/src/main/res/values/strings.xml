@@ -17,5 +17,5 @@
     <string name="entrar">Entrar</string>
     <string name="n_o_tenho_conta">Não tenho conta</string>
     <string name="sign_on">Cadastro</string>
-    <string name="name">Nome</string>
+    <string name="name">Nome Completo</string>
 </resources>
