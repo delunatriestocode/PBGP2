@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,19 +12,24 @@
         android:id="@+id/tx_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
         android:layout_marginTop="100dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
         android:text="Cadastro"
+        android:textColor="#F4F0ED"
         android:textSize="26sp"
-        android:textColor="#F4F0ED"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
-        android:layout_marginHorizontal="40dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_login">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inserir_nome"
@@ -33,8 +39,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nome"
-                android:background="#F4F0ED"/>
+                android:background="#F4F0ED"
+                android:hint="Nome" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,9 +52,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Data"
+                android:layout_marginTop="10dp"
                 android:background="#F4F0ED"
-                android:layout_marginTop="10dp"/>
+                android:hint="Data" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,8 +68,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="E-mail"
-                android:background="#F4F0ED"/>
+                android:background="#F4F0ED"
+                android:hint="E-mail" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,36 +82,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Senha"
-                android:background="#F4F0ED"/>
+                android:background="#F4F0ED"
+                android:hint="Senha" />
         </com.google.android.material.textfield.TextInputLayout>
-
-
 
 
     </LinearLayout>
 
     <Button
         android:id="@+id/btn_cadastrar"
-        android:layout_width="wrap_content"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:backgroundTint="#217B80"
-        android:text="     Cadastrar     "
-        android:textColor="#F4F0ED"
         android:layout_marginTop="50dp"
-        />
+        android:backgroundTint="#217B80"
+        android:text="Cadastrar"
+        android:textColor="#F4F0ED"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
-        android:id="@+id/novaconta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/tv_tem_conta"
+        android:layout_width="185dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
         android:gravity="center"
         android:text="Já tenho uma conta!"
+        android:fontFamily="sans-serif-condensed-medium"
         android:textColor="#F4F0ED"
-        android:layout_marginTop="280dp"
-        android:layout_gravity="center">
-    </TextView>
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
