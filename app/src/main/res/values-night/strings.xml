@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Login</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="n_o_tenho_conta">Não tenho conta</string>
+    <string name="name">Nome</string>
+</resources>

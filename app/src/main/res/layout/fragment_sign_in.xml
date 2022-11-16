@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="#135965">
+    android:background="#135965"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tx_login"
@@ -14,7 +15,7 @@
         android:layout_marginTop="100dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="Login"
+        android:text="@string/login"
         android:textColor="#F4F0ED"
         android:textSize="26sp"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,29 +33,33 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inserir_email"
+            android:id="@+id/input_email"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:boxBackgroundColor="#F4F0ED"
+            android:hint="@string/e_mail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#F4F0ED"
-                android:hint="E-mail" />
+                android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inserir_senha"
+            android:id="@+id/input_senha"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:boxBackgroundColor="#F4F0ED"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="password_toggle"
+            android:hint="@string/senha">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#F4F0ED"
-                android:hint="Senha" />
+                android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
@@ -66,7 +71,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:backgroundTint="#217B80"
-        android:text="Entrar"
+        android:text="@string/entrar"
         android:textColor="#F4F0ED"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,11 +85,11 @@
         android:layout_marginTop="150dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="Não tenho conta"
+        android:text="@string/n_o_tenho_conta"
         android:textColor="#F4F0ED"
-        android:textSize="20dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_entrar" />
 
