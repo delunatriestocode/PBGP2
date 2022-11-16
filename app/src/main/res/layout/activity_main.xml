@@ -1,11 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".main.ui.MainActivity"
-    android:background="#217B80">
+    android:background="#217B80"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/txt_apanha_gastos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Apanha Gastos"
+            android:textAlignment="center"
+            android:textColor="#E0E0E0"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/informations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="350dp">
+
+        <TextView
+            android:id="@+id/txt_renda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Renda Mensal"
+            android:textColor="#E0E0E0"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/val_renda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:text="R$ aaa,aa"
+            android:textAlignment="center"
+            android:textColor="#E0E0E0"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_porc_gastos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Porcentagem Gastos"
+            android:textColor="#E0E0E0"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/val_porc_gastos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:text="aa%"
+            android:textAlignment="center"
+            android:textColor="#E0E0E0"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
