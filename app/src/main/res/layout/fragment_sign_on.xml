@@ -43,14 +43,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_date_birth"
-            android:layout_width="match_parent"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_height="match_parent"
-            android:hint="Data"
-            app:boxBackgroundColor="#F4F0ED"/>
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_email"
@@ -72,11 +64,13 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_height="match_parent"
             android:hint="@string/senha"
-            app:boxBackgroundColor="#F4F0ED">
+            app:boxBackgroundColor="#F4F0ED"
+            app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -89,7 +83,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:backgroundTint="#217B80"
-        android:text="Cadastrar"
+        android:text="@string/cadastrar"
         android:textColor="#F4F0ED"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,9 +97,9 @@
         android:layout_marginTop="150dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="Já tenho uma conta!"
+        android:text="@string/tenho_conta"
         android:textColor="#F4F0ED"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

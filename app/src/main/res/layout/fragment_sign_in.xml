@@ -85,7 +85,7 @@
         android:layout_marginTop="150dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="@string/n_o_tenho_conta"
+        android:text="@string/nao_tenho_conta"
         android:textColor="#F4F0ED"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
