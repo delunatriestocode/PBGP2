@@ -30,12 +30,17 @@
 
     </LinearLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"/>
+
     <LinearLayout
         android:id="@+id/informations"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="350dp">
+        android:layout_marginTop="160dp">
 
         <TextView
             android:id="@+id/txt_renda"
