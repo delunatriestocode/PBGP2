@@ -38,6 +38,7 @@
             app:boxBackgroundColor="#F4F0ED">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -54,7 +55,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,6 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
