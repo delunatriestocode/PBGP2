@@ -6,26 +6,37 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.activityViewModels
 import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.FragmentSignInBinding
 import br.projeto.apanhagastos.main.ui.MainActivity
+import br.projeto.apanhagastos.utils.getTextInput
+import br.projeto.apanhagastos.utils.nav
+import br.projeto.apanhagastos.utils.toast
 
 
 class SignInFragment : Fragment() {
+
+    val viewModel by activityViewModels<LoginViewModel>()
+
     private var _binding: FragmentSignInBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSignInBinding.inflate(inflater, container, false)
         val view = binding.root
 
-
         setup()
         return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun setup() {
@@ -34,22 +45,47 @@ class SignInFragment : Fragment() {
 
     private fun setupClickListeners() {
         binding.apply {
-            tvNovaConta.setOnClickListener {
-                nav(R.id.action_signInFragment_to_signOnFragment)
-            }
-            btnEntrar.setOnClickListener{
-                    startActivity(Intent(requireContext(), MainActivity::class.java))
-                    activity?.finish()
 
+            btnEntrar.setOnClickListener {
+                onSignInClick()
             }
+
+            tvNovaConta.setOnClickListener {
+                onSignOnClick()
+            }
+
         }
     }
 
-    fun nav(id: Int) {
-        findNavController().navigate(id)
+
+    private fun onSignOnClick() {
+        nav(R.id.action_signInFragment_to_signOnFragment)
     }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+
+    private fun onSignInClick() {
+        val email = getTextInput(binding.inputEmail)
+        val password = getTextInput(binding.inputSenha)
+        signIn(email, password)
+
     }
+
+
+
+    private fun signIn(email: String, password: String){
+        viewModel.login(email, password)
+            .addOnSuccessListener {
+                toast("Logado com Sucesso")
+                startMainActivity()
+            }
+            .addOnFailureListener {
+                toast("Falha ao Logar\n${it.message}")
+            }
+    }
+
+    fun startMainActivity(){
+        startActivity(Intent(requireContext(), MainActivity::class.java))
+        activity?.finish()
+    }
+
+
 }

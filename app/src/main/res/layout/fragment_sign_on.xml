@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#135965"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".login.ui.SignOnFragment">
 
     <TextView
         android:id="@+id/tv_cadastro"
@@ -31,24 +34,24 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_name"
-            android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/name"
             app:boxBackgroundColor="#F4F0ED">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:inputType="textPersonName"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_email"
-            android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/e_mail"
             app:boxBackgroundColor="#F4F0ED">
@@ -62,10 +65,25 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_password"
-            android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/senha"
+            app:boxBackgroundColor="#F4F0ED"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_confirm_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/confirme_senha"
             app:boxBackgroundColor="#F4F0ED"
             app:endIconMode="password_toggle">
 

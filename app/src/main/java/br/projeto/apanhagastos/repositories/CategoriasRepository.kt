@@ -20,7 +20,7 @@ const val TAG = "CategoriasFirebase"
 class CategoriasRepository private constructor() {
 
 
-// Inicialização do Firebase Auth
+// Inicialização do Firebase Auth:
 
     companion object {
 

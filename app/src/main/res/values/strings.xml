@@ -20,4 +20,5 @@
     <string name="name">Nome Completo</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="tenho_conta">Já tenho uma conta!</string>
+    <string name="confirme_senha">Confirme Senha</string>
 </resources>

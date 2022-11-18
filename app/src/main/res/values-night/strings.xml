@@ -6,4 +6,5 @@
     <string name="nao_tenho_conta">Não tenho conta</string>
     <string name="name">Nome</string>
     <string name="tenho_conta">Já tenho uma conta!</string>
+    <string name="confirme_senha">Confirme Senha</string>
 </resources>
