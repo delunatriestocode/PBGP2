@@ -18,6 +18,5 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setup() {
-        TODO("Not yet implemented")
     }
 }
