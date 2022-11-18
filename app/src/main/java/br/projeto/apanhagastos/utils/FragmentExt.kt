@@ -15,7 +15,7 @@ fun Fragment.navUp(){
     findNavController().navigateUp()
 }
 
-fun Fragment.getTextInput(editText: TextInputLayout): String {
+fun Fragment.getTextInput(editText: TextInputEditText): String {
     return editText.text.toString()
 }
 
