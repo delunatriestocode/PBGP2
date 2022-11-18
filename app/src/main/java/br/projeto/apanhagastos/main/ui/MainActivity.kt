@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupClickListeners() {
-//        binding.btnSair.setOnClickListener {
-//            viewModel.logout()
-//            startLoginActivity()
-//        }
+        binding.btnSair.setOnClickListener {
+            viewModel.logout()
+            startLoginActivity()
+        }
     }
 
     private fun startLoginActivity() {

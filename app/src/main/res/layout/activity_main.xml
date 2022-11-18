@@ -26,7 +26,8 @@
 
         <TextView
             android:id="@+id/txt_apanha_gastos"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="75dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_weight="0"
@@ -36,6 +37,13 @@
             android:textColor="#E0E0E0"
             android:textSize="24sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_sair"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Sair" />
 
     </LinearLayout>
 
