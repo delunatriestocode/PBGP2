@@ -52,6 +52,7 @@ class SignOnFragment : Fragment() {
 
     private fun onSignOnClick() {
         binding.apply {
+            // val nome = getTextInput(inputName)
             val email = getTextInput(inputEmail)
             val password = getTextInput(inputPassword)
             val confirmPassword = getTextInput(inputConfirmPassword)

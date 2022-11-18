@@ -32,7 +32,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_cadastro">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -40,6 +39,7 @@
             app:boxBackgroundColor="#F4F0ED">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPersonName" />
