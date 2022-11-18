@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "856689929697",
+    "project_id": "apanha-gastos",
+    "storage_bucket": "apanha-gastos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856689929697:android:f2b242cb0199b5520c36a0",
+        "android_client_info": {
+          "package_name": "br.projeto.apanhagastos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856689929697-9p97e3mshnfr6hlkpqlkvit3hqoe2ovo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhk22sOznlD0Wx-HfcTD5hfOHZA64IElY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856689929697-9p97e3mshnfr6hlkpqlkvit3hqoe2ovo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

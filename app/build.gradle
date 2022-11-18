@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
+    // Plugin para Firebase
+    id 'com.google.gms.google-services'
 }
 
 android {
