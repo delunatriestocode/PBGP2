@@ -1,4 +1,4 @@
-package br.projeto.apanhagastos
+package br.projeto.apanhagastos.models
 
 import androidx.lifecycle.ViewModel
 
