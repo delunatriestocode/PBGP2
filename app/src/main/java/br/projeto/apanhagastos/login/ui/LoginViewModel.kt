@@ -1,7 +1,7 @@
 package br.projeto.apanhagastos.login.ui
 
 import androidx.lifecycle.ViewModel
-import br.projeto.apanhagastos.repositories.GastosRepository
+import br.projeto.apanhagastos.repositories.CategoriasRepository
 
 class LoginViewModel : ViewModel() {
 
