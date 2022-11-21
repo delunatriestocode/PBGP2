@@ -65,7 +65,12 @@ class SignInFragment : Fragment() {
     private fun onSignInClick() {
         val email = getTextInput(binding.inputEmail)
         val password = getTextInput(binding.inputSenha)
-        signIn(email, password)
+
+        if (email != "" && password != "") {
+            signIn(email, password)
+        } else {
+            toast("Digite um email e uma senha")
+        }
 
     }
 
