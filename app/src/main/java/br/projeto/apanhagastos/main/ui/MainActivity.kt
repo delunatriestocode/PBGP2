@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.AutoCompleteTextView
 import androidx.activity.viewModels
 import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.ActivityMainBinding
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
     private fun setup() {
         setupClickListeners()
         setupAdMob()
+
     }
 
     private fun setupAdMob() {
