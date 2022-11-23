@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.ui.MainActivity"
     android:background="#217B80"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".main.ui.MainActivity">
 
     <LinearLayout
 
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="20dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01">
 
         <ImageView
             android:id="@+id/img_hamburger_icon"
@@ -27,8 +31,8 @@
         <TextView
             android:id="@+id/txt_apanha_gastos"
             android:layout_width="wrap_content"
-            android:layout_marginHorizontal="75dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="75dp"
             android:layout_marginRight="10dp"
             android:layout_weight="0"
             android:fontFamily="sans-serif-condensed-medium"
@@ -48,16 +52,23 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="355dp"
-        android:layout_marginTop="80dp" />
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.111"
+        tools:layout_editor_absoluteX="3dp" />
 
     <LinearLayout
         android:id="@+id/informations"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="50dp">
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintVertical_bias="0.8"
+        tools:layout_editor_absoluteX="0dp">
 
         <TextView
             android:id="@+id/txt_renda"
@@ -65,11 +76,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Renda Mensal"
-            android:textColor="#E0E0E0"
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:textAlignment="center"
-            />
+            android:textColor="#E0E0E0"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/val_renda"
@@ -86,14 +96,13 @@
             android:id="@+id/txt_porc_gastos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:text="Porcentagem Gastos"
-            android:textColor="#E0E0E0"
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:textAlignment="center"
-            android:layout_marginTop="20dp"
-            />
+            android:textColor="#E0E0E0"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/val_porc_gastos"
@@ -109,14 +118,14 @@
     </LinearLayout>
 
     <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
-        android:onClick="adViewClick">
+        android:onClick="adViewClick"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent">
+
     </com.google.android.gms.ads.AdView>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

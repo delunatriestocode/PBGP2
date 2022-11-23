@@ -10,7 +10,7 @@ import br.projeto.apanhagastos.databinding.FragmentGastosBinding
 
 class GastosFragment : Fragment() {
 
-    val TAG = "AlunosFragment"
+    val TAG = "GastosFragment"
 
     val viewModel: MainViewModel by activityViewModels()
 
@@ -35,3 +35,4 @@ class GastosFragment : Fragment() {
         TODO("Not yet implemented")
     }
 }
+

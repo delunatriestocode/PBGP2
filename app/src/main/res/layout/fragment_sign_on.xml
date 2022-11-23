@@ -12,12 +12,13 @@
         android:id="@+id/tv_cadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        app:layout_constraintVertical_bias="0.1"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
         android:text="@string/sign_on"
         android:textColor="#F4F0ED"
         android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -113,7 +114,7 @@
         android:layout_width="185dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
-        android:layout_marginTop="150dp"
+        app:layout_constraintVertical_bias="0.7"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
         android:text="@string/tenho_conta"
