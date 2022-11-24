@@ -20,6 +20,13 @@ class EditarGastoFragment : Fragment() {
     private var _binding: FragmentEditarGastoBinding? = null
     private val binding get() = _binding!!
 
+//    override fun onResume() {
+//        super.onResume()
+//        val categorias = resources.getStringArray(R.array.categorias)
+//        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.categoria_list_item, categorias)
+//        binding.inputCategoria.setAdapter(arrayAdapter)
+//    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,17 +36,8 @@ class EditarGastoFragment : Fragment() {
         val view = binding.root
 
         val categorias = resources.getStringArray(R.array.categorias)
-
-//        val autoCompleteTxt = binding.inputCategoria
-//
-//        val adapterItems = ArrayAdapter<String>(this, R.layout.categoria_list_item, items)
-//        autoCompleteTxt.setAdapter<ArrayAdapter<String>>(adapterItems)
-//
-//        autoCompleteTxt.setOnItemClickListener(OnItemClickListener { parent, view, position, id ->
-//            val item = parent.getItemAtPosition(position).toString()
-//            Toast.makeText(context, "Item: $item", Toast.LENGTH_SHORT).show()
-//        })
-
+        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.categoria_list_item, categorias)
+        binding.inputCategoria.setAdapter(arrayAdapter)
 
 
         setup()

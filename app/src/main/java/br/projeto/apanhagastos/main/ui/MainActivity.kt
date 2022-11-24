@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
     private fun setup() {
         setupClickListeners()
         setupAdMob()
-
     }
 
     private fun setupAdMob() {
@@ -59,6 +58,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnSair.setOnClickListener {
             viewModel.logout()
             startLoginActivity()
+        }
+        binding.imgHamburgerIcon.setOnClickListener {
+
         }
     }
 
