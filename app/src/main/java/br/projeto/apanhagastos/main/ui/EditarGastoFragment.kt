@@ -58,14 +58,14 @@ class EditarGastoFragment : Fragment() {
     }
 
     private fun setupClickListeners() {
-        TODO("Not yet implemented")
+        //TODO("Not yet implemented")
     }
 
     private fun setupObservers() {
-        TODO("Not yet implemented")
+        //TODO("Not yet implemented")
     }
 
     private fun setupViews() {
-        TODO("Not yet implemented")
+        //TODO("Not yet implemented")
     }
 }
