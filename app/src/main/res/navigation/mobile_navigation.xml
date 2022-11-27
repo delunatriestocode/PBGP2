@@ -12,9 +12,15 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_add_gast"
+        android:id="@+id/nav_add_gasto"
         android:name="br.projeto.apanhagastos.main.ui.GastosFragment"
         android:label="@string/menu_add_gasto"
         tools:layout="@layout/fragment_criar_gasto" />
+
+    <fragment
+        android:id="@+id/nav_edit_renda"
+        android:name="br.projeto.apanhagastos.main.ui.GastosFragment"
+        android:label="@string/menu_edit_renda"
+        tools:layout="@layout/fragment_inserir_renda" />
 
 </navigation>

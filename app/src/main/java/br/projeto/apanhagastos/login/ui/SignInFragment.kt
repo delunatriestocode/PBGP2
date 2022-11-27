@@ -89,7 +89,7 @@ class SignInFragment : Fragment() {
     }
 
     fun startMainActivity(){
-        startActivity(Intent(requireContext(), DrawerActivity::class.java))
+        startActivity(Intent(requireContext(), MainActivity::class.java))
         activity?.finish()
     }
 

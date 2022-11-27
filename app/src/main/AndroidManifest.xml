@@ -16,13 +16,14 @@
             android:name=".DrawerActivity"
             android:exported="false"
             android:label="@string/title_activity_drawer"
-            android:theme="@style/Theme.ApanhaGastos.NoActionBar">
+            android:theme="@style/Theme.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".main.ui.MainActivity"
+            android:theme="@style/Theme.NoActionBar"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -31,7 +32,7 @@
         <activity
             android:name=".login.ui.LoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.ApanhaGastos">
+            android:theme="@style/Theme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

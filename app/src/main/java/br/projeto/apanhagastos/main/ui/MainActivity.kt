@@ -4,9 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.view.View
 import android.widget.AutoCompleteTextView
 import androidx.activity.viewModels
+import androidx.navigation.findNavController
+import androidx.navigation.ui.navigateUp
 import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.ActivityMainBinding
 import br.projeto.apanhagastos.login.ui.LoginActivity
@@ -68,7 +71,5 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, LoginActivity::class.java))
         finish()
     }
-
-
 
 }
