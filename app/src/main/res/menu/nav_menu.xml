@@ -16,10 +16,6 @@
             android:id="@+id/nav_cotacao"
             android:icon="@drawable/ic_baseline_attach_money_24"
             android:title="@string/menu_cotacao" />
-        <item
-            android:id="@+id/nav_logout"
-            android:title="@string/logout"
-            />
 
     </group>
 </menu>
