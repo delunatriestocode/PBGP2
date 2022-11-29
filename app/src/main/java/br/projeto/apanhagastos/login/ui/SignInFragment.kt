@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import br.projeto.apanhagastos.DrawerActivity
 import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.FragmentSignInBinding
 import br.projeto.apanhagastos.main.ui.MainActivity

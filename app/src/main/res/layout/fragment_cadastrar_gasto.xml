@@ -33,7 +33,7 @@
             app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_nome_aluno"
+                android:id="@+id/input_nome_gasto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nome do Gasto"
@@ -52,7 +52,7 @@
             app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_matricula"
+                android:id="@+id/input_valor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Valor"
@@ -81,12 +81,12 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btn_atualizar"
+            android:id="@+id/btn_cadastrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="48dp"
-            android:text="Criar" />
+            android:text="Cadastrar" />
 
 
     </LinearLayout>

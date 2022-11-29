@@ -117,7 +117,7 @@ class CategoriasRepository private constructor() {
         return colecaoGastos
     }
 
-    fun cadastrarAluno(gasto: Gasto): Task<DocumentReference> {
+    fun cadastrarGasto(gasto: Gasto): Task<DocumentReference> {
         return colecaoGastos.add(gasto)
     }
 
