@@ -5,6 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/back_sign"
+            android:title="@string/menu_home" />
+        <item
             android:id="@+id/nav_add_gasto"
             android:icon="@drawable/plus_sign"
             android:title="@string/menu_add_gasto" />
@@ -18,4 +22,13 @@
             android:title="@string/menu_cotacao" />
 
     </group>
+
+    <item
+        android:id="@+id/btn_logout"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:onClick=""
+        android:textColor="#666666"
+        android:textSize="18sp"
+        android:title="@string/logout" />
+
 </menu>

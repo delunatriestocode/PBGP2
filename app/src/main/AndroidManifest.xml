@@ -16,7 +16,7 @@
             android:name=".DrawerActivity"
             android:exported="false"
             android:label="@string/title_activity_drawer"
-            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+            android:theme="@style/Theme.ApanhaGastos.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -11,7 +11,6 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import br.projeto.apanhagastos.databinding.ActivityDrawerBinding
-import com.google.android.material.snackbar.Snackbar
 
 class DrawerActivity : AppCompatActivity() {
 
@@ -33,17 +32,17 @@ class DrawerActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_edit_renda, R.id.nav_add_gasto, R.id.nav_cotacao
+                R.id.nav_home, R.id.nav_edit_renda, R.id.nav_add_gasto, R.id.nav_cotacao
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.nav_menu, menu)
-        return true
-    }
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        menuInflater.inflate(R.menu.activity_drawer_menu, menu)
+//        return true
+//    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_drawer)

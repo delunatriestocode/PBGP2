@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.AutoCompleteTextView
 import androidx.activity.viewModels
+import androidx.navigation.ui.AppBarConfiguration
 import br.projeto.apanhagastos.databinding.ActivityMainBinding
 import br.projeto.apanhagastos.login.ui.LoginActivity
 import com.google.android.gms.ads.AdRequest

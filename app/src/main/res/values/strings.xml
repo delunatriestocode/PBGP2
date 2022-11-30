@@ -46,6 +46,7 @@
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
 
+    <string name="menu_home">Home</string>
     <string name="menu_add_gasto">Add Gasto</string>
     <string name="menu_edit_renda">Editar Renda</string>
     <string name="menu_cotacao">Cotação</string>
