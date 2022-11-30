@@ -28,7 +28,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-<!--    <style name="Theme.ApanhaGastos.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+    <style name="Theme.ApanhaGastos.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-<!--    <style name="Theme.ApanhaGastos.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+    <style name="Theme.ApanhaGastos.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -16,14 +16,14 @@
             android:name=".DrawerActivity"
             android:exported="false"
             android:label="@string/title_activity_drawer"
-            android:theme="@style/Theme.NoActionBar">
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".main.ui.MainActivity"
-            android:theme="@style/Theme.NoActionBar"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -11,6 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import br.projeto.apanhagastos.databinding.ActivityDrawerBinding
+import com.google.android.material.snackbar.Snackbar
 
 class DrawerActivity : AppCompatActivity() {
 
@@ -22,6 +23,8 @@ class DrawerActivity : AppCompatActivity() {
 
         binding = ActivityDrawerBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.appBarDrawer.toolbar)
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -38,7 +41,6 @@ class DrawerActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.nav_menu, menu)
         return true
     }
