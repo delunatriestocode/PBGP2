@@ -11,9 +11,6 @@ class MainViewModel : ViewModel() {
     val TAG = "ViewModel"
     val repository = CategoriasRepository.get()
 
-    fun getCurrentUserEmail(): String {
-        return repository.getCurrentUser()?.email ?: "Email não encontrado"
-    }
 
     fun logout() {
         repository.logout()
@@ -22,14 +19,6 @@ class MainViewModel : ViewModel() {
     fun cadastrarGasto(gasto: Gasto): Task<DocumentReference> {
         return repository.cadastrarGasto(gasto)
     }
-
-
-
-    fun atualizaTurma(gasto: Gasto) {
-        // TODO - Trocar Id por Categoria
-        // repository.atualizaGasto(selectedGastoComCategoria.value?.id, gasto)
-    }
-
 
 
 

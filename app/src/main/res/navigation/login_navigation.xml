@@ -7,6 +7,12 @@
     app:startDestination="@id/signInFragment">
 
     <fragment
+        android:id="@+id/signOnFragment"
+        android:name="br.projeto.apanhagastos.login.ui.SignOnFragment"
+        android:label="SignOnFragment"
+        tools:layout="@layout/fragment_sign_on"/>
+
+    <fragment
         android:id="@+id/signInFragment"
         android:name="br.projeto.apanhagastos.login.ui.SignInFragment"
         android:label="SignInFragment"
@@ -15,13 +21,5 @@
             android:id="@+id/action_signInFragment_to_signOnFragment"
             app:destination="@id/signOnFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/signOnFragment"
-        android:name="br.projeto.apanhagastos.login.ui.SignOnFragment"
-        android:label="SignOnFragment"
-        tools:layout="@layout/fragment_sign_on">
-        <action
-            android:id="@+id/action_signOnFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
-    </fragment>
+
 </navigation>

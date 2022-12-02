@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import android.widget.AutoCompleteTextView
 import androidx.activity.viewModels
@@ -47,19 +48,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupNavigationDrawer() {
-        // TODO - Terminar de Ligar a Main com o NavDrawer
-//        setSupportActionBar(binding.appBarDrawer.toolbar)
-//
-//        val drawerLayout: DrawerLayout = binding.drawerLayout
-//        val navView: NavigationView = binding.navView
-//        val navController = findNavController(R.id.nav_host_fragment_content_drawer)
-//        appBarConfiguration = AppBarConfiguration(
-//            setOf(
-//                R.id.nav_home, R.id.nav_edit_renda, R.id.nav_add_gasto, R.id.nav_cotacao
-//            ), drawerLayout
-//        )
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-//        navView.setupWithNavController(navController)
+        // TODO - Ligar a Main com o NavDrawer
+        setSupportActionBar(binding.appBarDrawer.toolbar)
+
+        val drawerLayout: DrawerLayout = binding.mainLayout
+        val navView: NavigationView = binding.navView
+        val navController = findNavController(R.id.nav_host_fragment_content_drawer)
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_edit_renda, R.id.nav_add_gasto, R.id.nav_cotacao
+            ), drawerLayout
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
     }
 
     private fun setupAdMob() {
@@ -77,15 +78,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupClickListeners() {
-        binding.btnSair.setOnClickListener {
-            viewModel.logout()
-            startLoginActivity()
-        }
+        // Função movida para o NavDrawer
+//        binding.btnSair.setOnClickListener {
+//            viewModel.logout()
+//            startLoginActivity()
+//        }
     }
 
     private fun startLoginActivity() {
         startActivity(Intent(this, LoginActivity::class.java))
         finish()
+    }
+
+    fun onLogout(item: MenuItem) {
+        // TODO - Botão de Logout no NavDrawer
+        viewModel.logout()
+        startLoginActivity()
     }
 
     // Menu 3 pontinhos em ToolBar:
