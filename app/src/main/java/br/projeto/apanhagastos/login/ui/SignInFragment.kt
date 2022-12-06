@@ -83,7 +83,8 @@ class SignInFragment : Fragment() {
                 startMainActivity()
             }
             .addOnFailureListener {
-                toast("Falha ao Logar\n${it.message}")
+
+                toast("Falha ao Logar\n${it.localizedMessage}")
             }
     }
 

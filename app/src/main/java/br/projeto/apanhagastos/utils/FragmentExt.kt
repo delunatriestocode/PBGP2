@@ -11,6 +11,7 @@ fun Fragment.nav(id: Int){
 }
 
 fun Fragment.navUp(){
+    // Apaga o Fragment do topo
     findNavController().navigateUp()
 }
 
@@ -22,6 +23,7 @@ fun Fragment.getTextInput(editText: TextInputEditText): String {
 fun Fragment.getIntInput(editText: EditText): Int {
     return editText.text.toString().toInt()
 }
+
 
 fun Fragment.toast(msg: String){
     Toast.makeText(

@@ -33,4 +33,8 @@ class LoginViewModel : ViewModel() {
         )
     }
 
+    fun getCurrentUserEmail(): String {
+        return repository.getCurrentUser()?.email ?: "Email não encontrado"
+    }
+
 }

@@ -12,6 +12,7 @@ import br.projeto.apanhagastos.databinding.FragmentSignOnBinding
 import br.projeto.apanhagastos.main.ui.MainActivity
 import br.projeto.apanhagastos.utils.getTextInput
 import br.projeto.apanhagastos.utils.nav
+import br.projeto.apanhagastos.utils.navUp
 import br.projeto.apanhagastos.utils.toast
 
 
@@ -45,7 +46,9 @@ class SignOnFragment : Fragment() {
                 onSignOnClick()
             }
             tvTemConta.setOnClickListener {
-                nav(R.id.action_signOnFragment_to_signInFragment)
+                // Apaga o Fragment de cadastro uma vez que
+                // o usuario afirma já ter uma conta.
+                navUp()
             }
         }
     }
