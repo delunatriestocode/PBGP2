@@ -22,7 +22,6 @@ import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
     val viewModel by viewModels<MainViewModel>()
@@ -47,13 +46,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupNavigation() {
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.title="Apanha"
-        supportActionBar?.subtitle="Apanha"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
 
     }
+
 
 
     private fun setupAdMob() {
