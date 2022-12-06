@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setup() {
         setupClickListeners()
-        setupAdMob()
+        //setupAdMob()
 //        setupNavigation()
     }
 
@@ -42,14 +42,13 @@ class MainActivity : AppCompatActivity() {
 //    }
 
 
-
-    private fun setupAdMob() {
+    /*private fun setupAdMob() {
         MobileAds.initialize(this) {}
         val adRequest = AdRequest.Builder().build()
         binding.adView.loadAd(adRequest)
     }
 
-    /*
+
     fun adViewClick(view: View) {
         if (anuncioInter != null) {
             anuncioInter?.show(this)
