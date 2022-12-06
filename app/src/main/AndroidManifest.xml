@@ -13,26 +13,18 @@
         android:theme="@style/Theme.ApanhaGastos"
         tools:targetApi="31">
         <activity
-            android:name=".DrawerActivity"
-            android:exported="false"
-            android:label="@string/title_activity_drawer"
-            android:theme="@style/Theme.ApanhaGastos.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".main.ui.MainActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
-            android:exported="false">
+            android:theme="@style/AppThemeNoActionBar"
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".login.ui.LoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.NoActionBar">
+            android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,7 +34,9 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity> <!-- Sample AdMob app ID -->
+        </activity>
+
+        <!-- Sample AdMob app ID -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-7233934464580219~7579954650" />

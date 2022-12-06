@@ -1,22 +1,28 @@
 package br.projeto.apanhagastos.main.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.AutoCompleteTextView
+import android.widget.Toolbar
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.ActivityMainBinding
 import br.projeto.apanhagastos.login.ui.LoginActivity
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
     val viewModel by viewModels<MainViewModel>()
@@ -34,11 +40,21 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     private fun setup() {
         setupClickListeners()
         setupAdMob()
+        setupNavigation()
     }
+
+    private fun setupNavigation() {
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.title="Apanha"
+        supportActionBar?.subtitle="Apanha"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+    }
+
 
     private fun setupAdMob() {
         MobileAds.initialize(this) {}
@@ -58,9 +74,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnSair.setOnClickListener {
             viewModel.logout()
             startLoginActivity()
-        }
-        binding.imgHamburgerIcon.setOnClickListener {
-            // TODO - Abrir Navigation Drawer
         }
     }
 
