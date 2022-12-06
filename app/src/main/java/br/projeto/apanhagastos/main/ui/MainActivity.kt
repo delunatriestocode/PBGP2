@@ -57,6 +57,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
     */
+     
+
 
     private fun setupClickListeners() {
         binding.btnSair.setOnClickListener {
@@ -69,5 +71,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, LoginActivity::class.java))
         finish()
     }
+
 
 }

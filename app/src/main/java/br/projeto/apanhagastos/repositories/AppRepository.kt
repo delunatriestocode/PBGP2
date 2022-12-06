@@ -1,7 +1,8 @@
 package br.projeto.apanhagastos.repositories
 
-import br.projeto.apanhagastos.models.Categoria
+import br.projeto.apanhagastos.models.Usuario
 import br.projeto.apanhagastos.models.Gasto
+import br.projeto.apanhagastos.models.GastoComId
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -15,9 +16,9 @@ import com.google.firebase.ktx.Firebase
 
 
 
-const val TAG = "CategoriasFirebase"
+const val TAG = "UsuariosFirebase"
 
-class CategoriasRepository private constructor() {
+class UsuariosRepository private constructor() {
 
 
 // Inicialização do Firebase Auth:
@@ -28,30 +29,30 @@ class CategoriasRepository private constructor() {
 
         lateinit var db: FirebaseFirestore
 
-        lateinit var colecaoCategorias : CollectionReference
+        lateinit var colecaoUsuarios : CollectionReference
 
         lateinit var colecaoGastos : CollectionReference
 
-        private var INSTANCE: CategoriasRepository? = null
+        private var INSTANCE: UsuariosRepository? = null
         fun initialize() {
             if (INSTANCE == null) {
-                INSTANCE = CategoriasRepository()
+                INSTANCE = UsuariosRepository()
             }
             auth = Firebase.auth
             // Banco de dados Firestore
             db = Firebase.firestore
 
-            // Coleção de categorias:
-            colecaoCategorias = db.collection("categorias")
+            // Coleção de usuarios:
+            colecaoUsuarios = db.collection("usuarios")
 
             // Coleção de gastos:
             colecaoGastos = db.collection("gastos")
 
         }
 
-        fun get(): CategoriasRepository {
+        fun get(): UsuariosRepository {
             return INSTANCE
-                ?: throw IllegalStateException("CategoriasRepository deve ser inicializado.")
+                ?: throw IllegalStateException("UsuariosRepository deve ser inicializado.")
         }
     }
 
@@ -88,26 +89,26 @@ class CategoriasRepository private constructor() {
 
     // FireStore:
 
-    // Categorias:
-    fun cadastrarCategoria(categoria: Categoria): Task<DocumentReference> {
-        return colecaoCategorias.add(categoria)
+    // Usuario:
+    fun cadastrarUsuario(usuario: Usuario): Task<DocumentReference> {
+        return colecaoUsuarios.add(usuario)
     }
 
-    fun getCategorias(): Task<QuerySnapshot> {
-        return colecaoCategorias.get()
+    fun getUsuarios(): Task<QuerySnapshot> {
+        return colecaoUsuarios.get()
     }
 
-    fun getCategoriasColecao(): CollectionReference {
-        return colecaoCategorias
+    fun getUsuariosColecao(): CollectionReference {
+        return colecaoUsuarios
     }
 
-    fun deleteCategoria(id: String) {
-        colecaoCategorias.document(id).delete()
+    fun deleteUsuario(id: String) {
+        colecaoUsuarios.document(id).delete()
     }
 
-    fun atualizaCategoria(id: String?, categoria: Categoria) {
+    fun atualizaUsuario(id: String?, usuario: Usuario) {
         if (id != null) {
-            colecaoCategorias.document(id).set(categoria)
+            colecaoUsuarios.document(id).set(usuario)
         }
     }
 
@@ -130,18 +131,17 @@ class CategoriasRepository private constructor() {
             colecaoGastos.document(id).set(gasto)
         }
     }
-/*
-    fun inscreverAlunoNaTurma(idTurma: String, alunoComId: AlunoComId){
-        val alunoNaTurma = GastoEmCategoria(
-            nomeAluno = alunoComId.nomeAluno,
-            matricula = alunoComId.matricula,
+
+    fun inscreverGastoEmUsuario(idUsuario: String, gastoComId: GastoComId){
+        val gastoEmUsuario = GastoEmUsuario(
+            nomeGasto = gastoComId.nomeGasto,
+            cadastrarGasto() = gastoComId.categoria,
         )
-        colecaoCategorias
+        colecaoTurmas
             .document(idTurma)
             .collection("alunos")
             .document(alunoComId.id)
             .set(alunoNaTurma)
     }
-*/
 
 }
