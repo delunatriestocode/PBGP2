@@ -61,7 +61,7 @@ class CadastrarGastoFragment : Fragment() {
     }
 
     private fun onAtualizarClick() {
-        val turma = getGastoFromInputs()
+        val gasto = getGastoFromInputs()
         // TODO - Terminar codigo de Cadastro
         // viewModel.atualizaGasto(gasto)
         navUp()
