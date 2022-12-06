@@ -4,21 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toolbar
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.ActivityMainBinding
 import br.projeto.apanhagastos.login.ui.LoginActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
-import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,14 +34,12 @@ class MainActivity : AppCompatActivity() {
     private fun setup() {
         setupClickListeners()
         setupAdMob()
-        setupNavigation()
+//        setupNavigation()
     }
 
-    private fun setupNavigation() {
-
-
-
-    }
+//    private fun setupNavigation() {
+//
+//    }
 
 
 
@@ -59,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         binding.adView.loadAd(adRequest)
     }
 
+    /*
     fun adViewClick(view: View) {
         if (anuncioInter != null) {
             anuncioInter?.show(this)
@@ -66,6 +57,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("INTERSTITIAL", "The interstitial ad wasn't ready yet.")
         }
     }
+    */
 
     private fun setupClickListeners() {
         binding.btnSair.setOnClickListener {
