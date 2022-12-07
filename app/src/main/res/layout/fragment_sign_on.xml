@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#135965"
+    android:background="@color/cor_login_background"
     android:orientation="vertical"
     tools:context=".login.ui.SignOnFragment">
 
@@ -16,7 +16,7 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
         android:text="@string/sign_on"
-        android:textColor="#F4F0ED"
+        android:textColor="@color/cor_base_texto_backgrond_textbox"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/name"
-            app:boxBackgroundColor="#F4F0ED">
+            android:textColorHint="@color/cor_texto_dentro_das_caixas_de_texto"
+            app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_name"
@@ -53,7 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/e_mail"
-            app:boxBackgroundColor="#F4F0ED">
+            android:textColorHint="@color/cor_texto_dentro_das_caixas_de_texto"
+            app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_email"
@@ -68,7 +70,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/senha"
-            app:boxBackgroundColor="#F4F0ED"
+            android:textColorHint="@color/cor_texto_dentro_das_caixas_de_texto"
+            app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -83,7 +86,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/confirme_senha"
-            app:boxBackgroundColor="#F4F0ED"
+            android:textColorHint="@color/cor_texto_dentro_das_caixas_de_texto"
+            app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -102,9 +106,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:backgroundTint="#217B80"
+        android:backgroundTint="@color/cor_botoes_login_e_cadastro"
         android:text="@string/cadastrar"
-        android:textColor="#F4F0ED"
+        android:textColor="@color/cor_base_texto_backgrond_textbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -118,7 +122,7 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
         android:text="@string/tenho_conta"
-        android:textColor="#F4F0ED"
+        android:textColor="@color/cor_base_texto_backgrond_textbox"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

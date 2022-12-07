@@ -22,6 +22,7 @@
             android:layout_marginVertical="2dp"
             android:gravity="center"
             android:text="Categoria"
+            android:textColor="@color/cor_categoria_texto"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -31,7 +32,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E0E0E0"
+        android:background="@color/cor_background_gasto_item"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -43,6 +44,7 @@
             android:layout_weight="1"
             android:text="R$ ???,??"
             android:textAlignment="center"
+            android:textColor="@color/cor_texto_gasto_item"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -67,17 +69,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#E0E0E0">
+        android:background="@color/cor_background_gasto_item"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/txt_nome_gasto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
             android:text="Nome gasto"
             android:textAlignment="center"
-            android:layout_marginBottom="4dp"
-            android:textSize="14sp"/>
+            android:textColor="@color/cor_texto_gasto_item"
+            android:textSize="14sp" />
 
     </LinearLayout>
 

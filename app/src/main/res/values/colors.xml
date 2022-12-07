@@ -8,7 +8,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="cor_background">#217B80</color>
+
+    <color name="cor_texto_dentro_das_caixas_de_texto">#535353</color>
+    <color name="cor_main_background">#217B80</color>
+    <color name="cor_login_background">#135965</color>
+    <color name="cor_botoes_login_e_cadastro">#217B80</color>
+    <color name="cor_base_texto_backgrond_textbox">#F4F0ED</color>
+
+    <color name="cor_background_gasto_item">#AFAFAF</color>
+    <color name="cor_texto_gasto_item">#4E4E4E</color>
+    <color name="cor_categoria_texto">#252424</color>
+
 
 
 </resources>
