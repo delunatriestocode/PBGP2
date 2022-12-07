@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import br.projeto.apanhagastos.databinding.FragmentCadastrarGastoBinding
 import br.projeto.apanhagastos.models.Gasto
-import br.projeto.apanhagastos.utils.getTextInput
-import br.projeto.apanhagastos.utils.navUp
-import br.projeto.apanhagastos.utils.toast
+import br.projeto.apanhagastos.utils.*
 
 class CadastrarGastoFragment : Fragment() {
 
@@ -60,20 +58,12 @@ class CadastrarGastoFragment : Fragment() {
             }
     }
 
-    private fun onAtualizarClick() {
-        val gasto = getGastoFromInputs()
-        // TODO - Terminar codigo de Cadastro
-        // viewModel.atualizaGasto(gasto)
-        navUp()
-    }
-
     private fun getGastoFromInputs(): Gasto {
         binding.apply {
             return Gasto(
-                nome = getTextInput(inputNomeGasto),
-                // TODO - Corrigir tipos dos Inputs
-//                categoria = getTextInput(inputCategoria),
-//                custo = getTextInput(inputValor)
+                nomeGasto = getTextInput(inputNomeGasto),
+                categoria = getAutoCompleteInput(inputCategoria),
+                custo = getDoubleInput(inputValor)
             )
         }
     }

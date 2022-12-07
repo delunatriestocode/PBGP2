@@ -1,5 +1,6 @@
 package br.projeto.apanhagastos.utils
 
+import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -19,9 +20,17 @@ fun Fragment.getTextInput(editText: TextInputEditText): String {
     return editText.text.toString()
 }
 
+fun Fragment.getAutoCompleteInput(editText: AutoCompleteTextView): String {
+    return editText.text.toString()
+}
+
 
 fun Fragment.getIntInput(editText: EditText): Int {
     return editText.text.toString().toInt()
+}
+
+fun Fragment.getDoubleInput(editText: EditText): Double {
+    return editText.text.toString().toDouble()
 }
 
 

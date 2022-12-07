@@ -1,14 +1,14 @@
 package br.projeto.apanhagastos.login.ui
 
 import androidx.lifecycle.ViewModel
-import br.projeto.apanhagastos.repositories.CategoriasRepository
+import br.projeto.apanhagastos.repositories.AppRepository
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 
 class LoginViewModel : ViewModel() {
 
     val TAG = "ViewModel"
-    val repository = CategoriasRepository.get()
+    val repository = AppRepository.get()
 
     // Auth:
 
@@ -20,7 +20,7 @@ class LoginViewModel : ViewModel() {
         email: String,
         password: String
     ): Task<AuthResult> {
-        return CategoriasRepository.auth.signInWithEmailAndPassword(email, password)
+        return AppRepository.auth.signInWithEmailAndPassword(email, password)
     }
 
     fun signOn(

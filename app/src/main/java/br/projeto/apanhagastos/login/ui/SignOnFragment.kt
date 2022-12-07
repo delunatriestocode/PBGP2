@@ -7,11 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.FragmentSignOnBinding
 import br.projeto.apanhagastos.main.ui.MainActivity
 import br.projeto.apanhagastos.utils.getTextInput
-import br.projeto.apanhagastos.utils.nav
 import br.projeto.apanhagastos.utils.navUp
 import br.projeto.apanhagastos.utils.toast
 

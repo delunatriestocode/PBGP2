@@ -1,18 +1,17 @@
 package br.projeto.apanhagastos.main.ui.adapters
-
+/*
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import br.projeto.apanhagastos.databinding.GastoListItemBinding
-import br.projeto.apanhagastos.models.Gasto
+import br.projeto.apanhagastos.models.UsuarioComId
 
-class GastoAdapter (val listener: GastoListener) :
+class UsuarioComIdAdapter(val listener: UsuarioComIdListener) :
     ListAdapter<
-            Gasto,
-            GastoAdapter.ViewHolder
-            >(GastoDiffCallback()) {
+            UsuarioComId,
+            UsuarioComIdAdapter.ViewHolder
+            >(UsuarioComIdDiffCallback()) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
@@ -27,14 +26,14 @@ class GastoAdapter (val listener: GastoListener) :
     }
 
     class ViewHolder private constructor(
-        val binding: GastoListItemBinding,
-        val listener: GastoListener
+        val binding: UsuarioListItemBinding,
+        val listener: UsuarioComIdListener
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Gasto, position: Int) {
+        fun bind(item: UsuarioComId, position: Int) {
             binding.apply {
-                txtNomeGasto.text = item.nome
-                txtCategoria.text = item.categoria
-                txtValorGasto.text = item.custo.toString()
+                usuarioNome.text = item.nomeUsuario
+                usuarioProfessor.text = item.nomeProfessor
+                usuarioHorario.text = item.horario
 
                 ivEdit.setOnClickListener {
                     listener.onEditClick(item)
@@ -47,9 +46,9 @@ class GastoAdapter (val listener: GastoListener) :
         }
 
         companion object {
-            fun from(parent: ViewGroup, listener: GastoListener): ViewHolder {
+            fun from(parent: ViewGroup, listener: UsuarioComIdListener): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = GastoListItemBinding.inflate(
+                val binding = UsuarioListItemBinding.inflate(
                     layoutInflater, parent, false
                 )
                 return ViewHolder(binding, listener)
@@ -60,19 +59,20 @@ class GastoAdapter (val listener: GastoListener) :
 }
 
 
-class GastoDiffCallback : DiffUtil.ItemCallback<Gasto>() {
+class UsuarioComIdDiffCallback : DiffUtil.ItemCallback<UsuarioComId>() {
 
-    override fun areItemsTheSame(oldItem: Gasto, newItem: Gasto): Boolean {
-        return oldItem.nome == newItem.nome
+    override fun areItemsTheSame(oldItem: UsuarioComId, newItem: UsuarioComId): Boolean {
+        return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: Gasto, newItem: Gasto): Boolean {
+    override fun areContentsTheSame(oldItem: UsuarioComId, newItem: UsuarioComId): Boolean {
         return oldItem == newItem
     }
 }
 
 
-interface GastoListener {
-    fun onEditClick(Gasto: Gasto)
-    fun onDeleteClick(Gasto:Gasto)
+interface UsuarioComIdListener {
+    fun onEditClick(usuario: UsuarioComId)
+    fun onDeleteClick(usuario: UsuarioComId)
 }
+*/
