@@ -3,6 +3,7 @@ package br.projeto.apanhagastos.repositories
 import br.projeto.apanhagastos.models.Usuario
 import br.projeto.apanhagastos.models.Gasto
 import br.projeto.apanhagastos.models.GastoComId
+import br.projeto.apanhagastos.models.GastoEmUsuario
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -18,7 +19,7 @@ import com.google.firebase.ktx.Firebase
 
 const val TAG = "UsuariosFirebase"
 
-class UsuariosRepository private constructor() {
+class AppRepository private constructor() {
 
 
 // Inicialização do Firebase Auth:
@@ -33,10 +34,10 @@ class UsuariosRepository private constructor() {
 
         lateinit var colecaoGastos : CollectionReference
 
-        private var INSTANCE: UsuariosRepository? = null
+        private var INSTANCE: AppRepository? = null
         fun initialize() {
             if (INSTANCE == null) {
-                INSTANCE = UsuariosRepository()
+                INSTANCE = AppRepository()
             }
             auth = Firebase.auth
             // Banco de dados Firestore
@@ -50,9 +51,9 @@ class UsuariosRepository private constructor() {
 
         }
 
-        fun get(): UsuariosRepository {
+        fun get(): AppRepository {
             return INSTANCE
-                ?: throw IllegalStateException("UsuariosRepository deve ser inicializado.")
+                ?: throw IllegalStateException("AppRepository deve ser inicializado.")
         }
     }
 
@@ -135,13 +136,13 @@ class UsuariosRepository private constructor() {
     fun inscreverGastoEmUsuario(idUsuario: String, gastoComId: GastoComId){
         val gastoEmUsuario = GastoEmUsuario(
             nomeGasto = gastoComId.nomeGasto,
-            cadastrarGasto() = gastoComId.categoria,
+            categoria = gastoComId.categoria,
         )
-        colecaoTurmas
-            .document(idTurma)
-            .collection("alunos")
-            .document(alunoComId.id)
-            .set(alunoNaTurma)
+        colecaoUsuarios
+            .document(idUsuario)
+            .collection("gastos")
+            .document(gastoComId.id)
+            .set(gastoEmUsuario)
     }
 
 }
