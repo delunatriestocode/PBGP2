@@ -17,7 +17,8 @@
         app:itemIconTint="@color/color_selected_bottomnav"
         app:itemTextColor="@color/color_selected_bottomnav"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="42dp" />
+        tools:layout_editor_absoluteX="42dp"
+        />
 
     <fragment
         android:id="@+id/fragment"

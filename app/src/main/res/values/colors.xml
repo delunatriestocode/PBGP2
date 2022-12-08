@@ -15,7 +15,7 @@
     <color name="cor_botoes_login_e_cadastro">#217B80</color>
     <color name="cor_base_texto_backgrond_textbox">#F4F0ED</color>
 
-    <color name="cor_background_gasto_item">#AFAFAF</color>
+    <color name="cor_background_gasto_item">#E0E0E0</color>
     <color name="cor_texto_gasto_item">#4E4E4E</color>
     <color name="cor_categoria_texto">#252424</color>
 
