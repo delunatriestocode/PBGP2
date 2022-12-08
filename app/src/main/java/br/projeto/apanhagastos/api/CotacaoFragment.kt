@@ -24,11 +24,12 @@ class CotacaoFragment : Fragment() {
     ): View/*?*/ {
         _binding = FragmentCotacaoBinding.inflate(inflater, container, false)
         val view = binding.root
-        setup()
+        //setup()
 
         return view
     }
 
+/*
     fun setup() {
         getData()
     }
@@ -46,13 +47,14 @@ class CotacaoFragment : Fragment() {
             }
             override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
                 response.bid()?.forEach{
-                    
-                    binding.idTexto.text = binding.idTexto.text.toString().plus(it.bid)
+
+                    binding.idTexto.text = binding.idTexto.text.toString().toDouble().plus(it.bid)
                     
                 }
             }
         })
     }
 
+*/
 
 }

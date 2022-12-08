@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.fragment.app.activityViewModels
+import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.FragmentCadastrarGastoBinding
 import br.projeto.apanhagastos.models.Gasto
 import br.projeto.apanhagastos.utils.*
@@ -16,12 +18,12 @@ class CadastrarGastoFragment : Fragment() {
     private var _binding: FragmentCadastrarGastoBinding? = null
     private val binding get() = _binding!!
 
-    //    override fun onResume() {
-    //        super.onResume()
-    //        val categorias = resources.getStringArray(R.array.categorias)
-    //        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.categoria_list_item, categorias)
-    //        binding.inputCategoria.setAdapter(arrayAdapter)
-    //    }
+    override fun onResume() {
+        super.onResume()
+        val categorias = resources.getStringArray(R.array.categorias)
+        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.categoria_list_item, categorias)
+        binding.inputCategoria.setAdapter(arrayAdapter)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
