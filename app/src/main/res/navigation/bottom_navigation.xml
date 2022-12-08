@@ -26,4 +26,8 @@
         android:id="@+id/cadastrarGastoFragment"
         android:name="br.projeto.apanhagastos.main.ui.CadastrarGastoFragment"
         android:label="CadastrarGastoFragment" />
+    <fragment
+        android:id="@+id/inserirRendaFragment"
+        android:name="br.projeto.apanhagastos.InserirRendaFragment"
+        android:label="InserirRendaFragment" />
 </navigation>

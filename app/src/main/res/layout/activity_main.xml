@@ -14,8 +14,8 @@
         android:background="#135965"
         android:layout_height="wrap_content"
         app:menu="@menu/menu_bottom_nav"
-        app:itemTextColor="@color/color_selected_bottomnav"
         app:itemIconTint="@color/color_selected_bottomnav"
+        app:itemTextColor="@color/color_selected_bottomnav"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="42dp" />
 
