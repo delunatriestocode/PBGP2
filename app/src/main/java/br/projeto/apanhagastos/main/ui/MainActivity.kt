@@ -6,11 +6,15 @@ import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.ActivityMainBinding
 import br.projeto.apanhagastos.login.ui.LoginActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,16 +30,17 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        val navController = findNavController(R.id.fragment)
 
-        setup()
+        bottomNavigationView.setupWithNavController(navController)
     }
 
 
-    private fun setup() {
-        setupClickListeners()
+
         //setupAdMob()
 //        setupNavigation()
-    }
+}
 
 //    private fun setupNavigation() {
 //
@@ -60,17 +65,8 @@ class MainActivity : AppCompatActivity() {
      
 
 
-    private fun setupClickListeners() {
-        binding.btnSair.setOnClickListener {
-            viewModel.logout()
-            startLoginActivity()
-        }
-    }
-
-    private fun startLoginActivity() {
-        startActivity(Intent(this, LoginActivity::class.java))
-        finish()
-    }
 
 
-}
+
+
+
