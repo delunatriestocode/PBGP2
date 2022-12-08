@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.FragmentGastosBinding
+import br.projeto.apanhagastos.utils.nav
 
 class GastosFragment : Fragment() {
 
@@ -27,12 +29,21 @@ class GastosFragment : Fragment() {
     ): View? {
         _binding = FragmentGastosBinding.inflate(inflater, container, false)
         val view = binding.root
+
         setup()
         return view
     }
 
     fun setup() {
-        TODO("Not yet implemented")
+        setupClickListeners()
+    }
+
+    private fun setupClickListeners() {
+        binding.apply {
+            btnCadastrar.setOnClickListener {
+                nav(R.id.action_gastosFragment_to_cadastrarGastoFragment)
+            }
+        }
     }
 }
 

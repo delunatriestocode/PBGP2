@@ -33,6 +33,11 @@ class HomeFragment : Fragment() {
         return view
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
     private fun setup() {
         setupClickListeners()}
     
@@ -44,12 +49,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun startLoginActivity() {
-        startActivity(Intent(requireContext(), MainActivity::class.java))
+        startActivity(Intent(requireContext(), LoginActivity::class.java))
         activity?.finish()
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
+
 }

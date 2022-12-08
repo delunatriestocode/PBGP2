@@ -8,7 +8,6 @@
     android:layout_marginVertical="16dp"
     android:orientation="vertical">
 
-
     <LinearLayout
         android:id="@+id/cor_categoria"
         android:layout_width="match_parent"

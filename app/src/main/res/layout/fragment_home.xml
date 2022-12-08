@@ -8,54 +8,44 @@
     android:orientation="vertical"
     tools:context=".main.ui.MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/txt_apanha_gastos"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Apanha Gastos"
+        android:textAlignment="center"
+        android:textColor="#E0E0E0"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_sair"
+        app:layout_constraintHorizontal_bias="1.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.01">
+        app:layout_constraintVertical_bias="0.022" />
 
-
-        <TextView
-            android:id="@+id/txt_apanha_gastos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="75dp"
-            android:layout_weight="0"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="Apanha Gastos"
-            android:textAlignment="center"
-            android:textColor="#E0E0E0"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn_sair"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_sair"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="Sair"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_sair"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_marginHorizontal="16dp"
         android:layout_width="match_parent"
         android:layout_height="400dp"
+        android:layout_marginHorizontal="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@id/txt_apanha_gastos"
         app:layout_constraintVertical_bias="0.111"
         tools:layout_editor_absoluteX="3dp" />
 

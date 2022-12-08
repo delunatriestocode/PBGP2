@@ -11,11 +11,19 @@
         android:label="HomeFragment" />
     <fragment
         android:id="@+id/cotacaoFragment"
-        android:name="br.projeto.apanhagastos.main.ui.CotacaoFragment"
+        android:name="br.projeto.apanhagastos.api.CotacaoFragment"
         android:label="CotacaoFragment" />
     <fragment
         android:id="@+id/gastosFragment"
         android:name="br.projeto.apanhagastos.main.ui.GastosFragment"
         android:label="fragment_gastos"
-        tools:layout="@layout/fragment_gastos" />
+        tools:layout="@layout/fragment_gastos" >
+        <action
+            android:id="@+id/action_gastosFragment_to_cadastrarGastoFragment"
+            app:destination="@id/cadastrarGastoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastrarGastoFragment"
+        android:name="br.projeto.apanhagastos.main.ui.CadastrarGastoFragment"
+        android:label="CadastrarGastoFragment" />
 </navigation>

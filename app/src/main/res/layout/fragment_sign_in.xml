@@ -48,6 +48,7 @@
                 android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/cor_texto_dentro_das_caixas_de_texto"
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -60,12 +61,14 @@
             android:hint="@string/senha"
             android:textColorHint="@color/cor_texto_dentro_das_caixas_de_texto"
             app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox"
-            app:endIconMode="password_toggle">
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/cor_texto_dentro_das_caixas_de_texto">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_senha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/cor_texto_dentro_das_caixas_de_texto"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 

@@ -8,15 +8,16 @@ import br.projeto.apanhagastos.models.Gasto
 import br.projeto.apanhagastos.models.GastoComId
 import br.projeto.apanhagastos.models.Usuario
 import br.projeto.apanhagastos.models.UsuarioComId
-import br.projeto.apanhagastos.repositories.UsuariosRepository
+import br.projeto.apanhagastos.repositories.AppRepository
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.ktx.toObject
 
 class MainViewModel : ViewModel() {
 
     val TAG = "ViewModel"
-    val repository = UsuariosRepository.get()
+    val repository = AppRepository.get()
 
     fun getCurrentUserEmail(): String {
         return repository.getCurrentUser()?.email ?: "Email não encontrado"

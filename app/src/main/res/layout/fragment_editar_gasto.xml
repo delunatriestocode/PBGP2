@@ -39,6 +39,7 @@
                 android:id="@+id/input_nome_aluno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:hint="Nome do Gasto"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -56,6 +57,7 @@
                 android:id="@+id/input_matricula"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:hint="Valor"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
