@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cor_login_background">
+    android:background="@color/cor_botoes_login_e_cadastro">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_alunos"
@@ -14,7 +14,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btn_cadastrar"
@@ -23,7 +24,7 @@
         android:layout_gravity="center"
         android:layout_marginHorizontal="8dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/cor_botoes_login_e_cadastro"
+        android:backgroundTint="@color/cor_login_background"
         android:text="Cadastrar Gasto"
         android:textColor="@color/cor_base_texto_backgrond_textbox"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -14,6 +14,8 @@
         android:background="#135965"
         android:layout_height="wrap_content"
         app:menu="@menu/menu_bottom_nav"
+        app:itemTextColor="@color/color_selected_bottomnav"
+        app:itemIconTint="@color/color_selected_bottomnav"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="42dp" />
 
@@ -28,6 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:navGraph="@navigation/bottom_navigation" />
+        app:navGraph="@navigation/bottom_navigation"
+        tools:layout="@layout/fragment_home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
