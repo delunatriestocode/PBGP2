@@ -33,6 +33,7 @@ class MainViewModel : ViewModel() {
 
     // Ouvir vários documentos em uma coleção
     // https://firebase.google.com/docs/firestore/query-data/listen?hl=pt&authuser=0#listen_to_multiple_documents_in_a_collection
+    /*
     fun observeColecaoUsuarios() {
 
         repository.getUsuariosColecao()
@@ -195,7 +196,7 @@ class MainViewModel : ViewModel() {
     fun atualizaUsuario(usuario: Usuario) {
         repository.atualizaUsuario(selectedUsuarioComId.value?.id, usuario)
     }
-
+*/
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -363,18 +364,18 @@ class MainViewModel : ViewModel() {
     }
 
 
-    fun inscreverGastoNaUsuario(gastoComId: GastoComId){
+    /*fun inscreverGastoNoUsuario(gastoComId: GastoComId){
         repository.inscreverGastoEmUsuario(
             selectedUsuarioComId.value?.id!!,
             gastoComId
         )
-    }
+    }*/
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
     init {
-        observeColecaoUsuarios()
+        // observeColecaoUsuarios()
         observeColecaoGastos()
     }
 

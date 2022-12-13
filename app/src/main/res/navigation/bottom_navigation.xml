@@ -8,11 +8,13 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="br.projeto.apanhagastos.main.ui.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/cotacaoFragment"
         android:name="br.projeto.apanhagastos.api.CotacaoFragment"
-        android:label="CotacaoFragment" />
+        android:label="CotacaoFragment"
+        tools:layout="@layout/fragment_cotacao"/>
     <fragment
         android:id="@+id/gastosFragment"
         android:name="br.projeto.apanhagastos.main.ui.GastosFragment"
@@ -21,13 +23,23 @@
         <action
             android:id="@+id/action_gastosFragment_to_cadastrarGastoFragment"
             app:destination="@id/cadastrarGastoFragment" />
+        <action
+            android:id="@+id/action_gastosFragment_to_editarGastoFragment"
+            app:destination="@id/editarGastoFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/editarGastoFragment"
+        android:name="br.projeto.apanhagastos.main.ui.EditarGastoFragment"
+        android:label="EditarGastoFragment"
+        tools:layout="@layout/fragment_editar_gasto"/>
     <fragment
         android:id="@+id/cadastrarGastoFragment"
         android:name="br.projeto.apanhagastos.main.ui.CadastrarGastoFragment"
-        android:label="CadastrarGastoFragment" />
+        android:label="CadastrarGastoFragment"
+        tools:layout="@layout/fragment_cadastrar_gasto"/>
     <fragment
         android:id="@+id/inserirRendaFragment"
         android:name="br.projeto.apanhagastos.InserirRendaFragment"
-        android:label="InserirRendaFragment" />
+        android:label="InserirRendaFragment"
+        tools:layout="@layout/fragment_inserir_renda"/>
 </navigation>

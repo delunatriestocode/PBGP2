@@ -4,12 +4,12 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface Endpoint {
-    @GET("daily/USD-BRL/1")
+    @GET("json/last/USD-BRL")
     fun getUSDtoBRL() : Call<List<Moeda>>
 
 
 /*
-    @GET("daily/EUR-BRL/1")
+    @GET("last/EUR-BRL")
     fun getEURtoBRL() : Call<List<Moeda>>
 */
 

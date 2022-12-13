@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import br.projeto.apanhagastos.databinding.FragmentCotacaoBinding
-import com.google.api.Endpoint
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -35,17 +35,17 @@ class CotacaoFragment : Fragment() {
 
     private fun getData() {
         val retrofitClient = NetworkUtils
-            .getRetrofitInstance("https://economia.awesomeapi.com.br/json/")
+            .getRetrofitInstance("https://economia.awesomeapi.com.br/")
 
         val endpoint = retrofitClient.create(Endpoint::class.java)
         val callback = endpoint.getUSDtoBRL()
 
         callback.enqueue(object : Callback<List<Moeda>> {
             override fun onFailure(call: Call<List<Moeda>>, t: Throwable) {
-                Toast.makeText(baseContext, t.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), t.message, Toast.LENGTH_SHORT).show()
             }
             override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
-                response.bid()?.forEach{
+                response.body()?.forEach{
                     
                     binding.idTexto.text = binding.idTexto.text.toString().plus(it.bid)
                     

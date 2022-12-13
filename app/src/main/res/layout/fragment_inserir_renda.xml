@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#135965">
+    android:background="@color/cor_main_background">
 
     <TextView
         android:id="@+id/txt_insira_renda"
@@ -19,26 +18,26 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-400dp"
-        app:boxBackgroundColor="#F4F0ED"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintVertical_bias="0.3"
+        android:textColorHint="@color/cor_texto_dentro_das_caixas_de_texto"
+        app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:layout_marginHorizontal="40dp"
-            android:hint="Renda"/>
+            android:hint="Renda"
+            android:inputType="numberDecimal" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -48,13 +47,13 @@
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:backgroundTint="#217B80"
+        android:backgroundTint="@color/cor_login_background"
         android:text="ok"
         android:textColor="#F4F0ED"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintVertical_bias="0.6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
