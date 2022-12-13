@@ -59,9 +59,6 @@ class GastosFragment : Fragment() {
             btnCadastrar.setOnClickListener {
                 nav(R.id.action_gastosFragment_to_cadastrarGastoFragment)
             }
-            btnEditar.setOnClickListener {
-                nav(R.id.action_gastosFragment_to_editarGastoFragment)
-            }
         }
     }
 

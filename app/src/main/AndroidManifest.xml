@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissões seguras: Não precisa pedir permissão em tempo de execução -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".application.AppApplication"
         android:allowBackup="true"
@@ -36,7 +40,7 @@
                 android:value="" />
         </activity>
 
-        <!-- Sample AdMob app ID -->
+        <!-- Sample AdMob app ID test: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-7233934464580219~7579954650" />

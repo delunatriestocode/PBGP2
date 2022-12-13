@@ -1,30 +1,28 @@
 package br.projeto.apanhagastos.main.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.viewModels
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.FragmentHomeBinding
 import br.projeto.apanhagastos.login.ui.LoginActivity
-import br.projeto.apanhagastos.main.ui.adapters.GastoComIdAdapter
-import br.projeto.apanhagastos.main.ui.adapters.GastoComIdListener
 import br.projeto.apanhagastos.main.ui.adapters.GastoHomeAdapter
 import br.projeto.apanhagastos.models.GastoComId
-import br.projeto.apanhagastos.utils.nav
 
 
 class HomeFragment : Fragment() {
 
     val viewModel by viewModels<MainViewModel>()
-    
+
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    var rendaMensal: String? = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,14 +36,30 @@ class HomeFragment : Fragment() {
         return view
     }
 
-    val adapter = GastoHomeAdapter()
-
-
     private fun setup() {
         setupClickListeners()
         setupObservers()
         setupRecyclerView()
+        // setupViews()
     }
+
+/*
+    // Verifica se o arquivo pai contem a interface
+    private lateinit var listener: RendaMensalComunicador
+    override fun onAttach(context: Context) {
+        if (context is RendaMensalComunicador) {
+            listener = context
+        }
+        super.onAttach(context)
+    }
+*/
+
+/*
+    private fun setupViews() {
+        val renda = requireArguments().getDouble("")
+    }
+*/
+
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -66,6 +80,7 @@ class HomeFragment : Fragment() {
         }
     }
 
+    val adapter = GastoHomeAdapter()
     fun atualizaRecyclerView(lista: List<GastoComId>) {
         adapter.submitList(lista)
         binding.rvGastosHome.adapter = adapter

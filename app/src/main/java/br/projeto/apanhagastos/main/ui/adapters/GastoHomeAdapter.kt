@@ -39,9 +39,14 @@ class GastoHomeAdapter() :
                 txtValorGasto.text = item.custo.toString()
                 var cor = ""
                 when (item.categoria) {
-                    "Lazer" -> cor = "#00cf67"
-                    "Educação" -> cor = "#3fe7ff"
-                    else -> cor = "FFFFFF"
+                    "Saúde" -> cor = "#5EFF3F"
+                    "Educação" -> cor = "#3FE7FF"
+                    "Lazer" -> cor = "#00CF67"
+                    "Mercado" -> cor = "#FF6E00"
+                    "Alimentação" -> cor = "#FFA324"
+                    "Contas" -> cor = "#0BB3FF"
+                    "Dívidas" -> cor = "#FF3300"
+                    else -> cor = "#BEBEBE"
                 }
                 corCategoria.setBackgroundColor(Color.parseColor(cor))
 
