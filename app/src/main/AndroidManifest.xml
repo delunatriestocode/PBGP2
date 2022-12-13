@@ -4,7 +4,7 @@
 
     <!-- Permissões seguras: Não precisa pedir permissão em tempo de execução -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
         android:name=".application.AppApplication"

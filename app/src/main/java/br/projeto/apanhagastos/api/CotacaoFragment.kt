@@ -54,9 +54,9 @@ class CotacaoFragment : Fragment() {
             }
             override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
                 response.body()?.forEach{
-                    
+
                     binding.idTexto.text = binding.idTexto.text.toString().plus(it.bid)
-                    
+
                 }
             }
         })
