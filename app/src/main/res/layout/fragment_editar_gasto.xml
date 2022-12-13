@@ -36,7 +36,7 @@
             app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_nome_aluno"
+                android:id="@+id/input_nome_gasto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
@@ -54,10 +54,11 @@
             app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_matricula"
+                android:id="@+id/input_Valor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
+                android:inputType="numberDecimal"
                 android:hint="Valor"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -78,6 +79,7 @@
                 android:id="@+id/input_categoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:inputType="none"
                 android:textSize="18sp" />
 

@@ -48,22 +48,6 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/iv_edit"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            app:srcCompat="@drawable/ic_edit"
-            app:tint="@color/black" />
-
-        <ImageView
-            android:id="@+id/iv_delete"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            app:srcCompat="@drawable/ic_delete"
-            app:tint="@color/black" />
-
     </LinearLayout>
 
     <LinearLayout

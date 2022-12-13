@@ -42,14 +42,15 @@
         app:layout_constraintVertical_bias="0.016" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rv_gastos_home"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_apanha_gastos"
-        app:layout_constraintVertical_bias="0.111"
-        tools:layout_editor_absoluteX="3dp" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <LinearLayout
         android:id="@+id/informations"
@@ -59,7 +60,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/rv_gastos_home"
         app:layout_constraintVertical_bias="0.6">
 
         <TextView

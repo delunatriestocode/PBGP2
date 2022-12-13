@@ -12,6 +12,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.FragmentEditarGastoBinding
+import br.projeto.apanhagastos.models.Gasto
+import br.projeto.apanhagastos.utils.getAutoCompleteInput
+import br.projeto.apanhagastos.utils.getDoubleInput
+import br.projeto.apanhagastos.utils.getTextInput
+import br.projeto.apanhagastos.utils.navUp
 
 class EditarGastoFragment : Fragment() {
 
@@ -20,12 +25,12 @@ class EditarGastoFragment : Fragment() {
     private var _binding: FragmentEditarGastoBinding? = null
     private val binding get() = _binding!!
 
-//    override fun onResume() {
-//        super.onResume()
-//        val categorias = resources.getStringArray(R.array.categorias)
-//        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.categoria_list_item, categorias)
-//        binding.inputCategoria.setAdapter(arrayAdapter)
-//    }
+    override fun onResume() {
+        super.onResume()
+        val categorias = resources.getStringArray(R.array.categorias)
+        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.categoria_list_item, categorias)
+        binding.inputCategoria.setAdapter(arrayAdapter)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,24 +53,47 @@ class EditarGastoFragment : Fragment() {
         setupViews()
         setupObservers()
         setupClickListeners()
-        setupSelectCategoria()
-    }
-
-    private fun setupSelectCategoria() {
-
-
-
     }
 
     private fun setupClickListeners() {
-        //TODO("Not yet implemented")
+        binding.btnAtualizar.setOnClickListener {
+            onAtualizarClick()
+        }
+    }
+
+    private fun onAtualizarClick() {
+        val aluno = getGastoFromInputs()
+        viewModel.atualizaGasto(aluno)
+        navUp()
+    }
+
+    private fun getGastoFromInputs(): Gasto {
+        binding.apply {
+            return Gasto(
+                nomeGasto = getTextInput(inputNomeGasto),
+                categoria = getAutoCompleteInput(inputCategoria),
+                custo = getDoubleInput(inputValor)
+            )
+        }
     }
 
     private fun setupObservers() {
-        //TODO("Not yet implemented")
+        viewModel.selectedGastoComId.observe(viewLifecycleOwner){
+            binding.apply {
+                inputNomeGasto.setText(it.nomeGasto)
+                inputCategoria.setText(it.categoria)
+                inputValor.setText(it.custo.toString())
+            }
+        }
     }
 
     private fun setupViews() {
-        //TODO("Not yet implemented")
+        activity?.setTitle("Editar")
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 }

@@ -1,18 +1,20 @@
 package br.projeto.apanhagastos.main.ui.adapters
-/*
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import br.projeto.apanhagastos.databinding.GastoListItemBinding
+import br.projeto.apanhagastos.databinding.GastoListItemHomeBinding
 import br.projeto.apanhagastos.models.GastoComId
 
-class InscreverGastoEmUsuarioAdapter(val listener: InscreverGastoEmUsuarioListener) :
+class GastoHomeAdapter() :
     ListAdapter<
             GastoComId,
-            InscreverGastoEmUsuarioAdapter.ViewHolder
-            >(InscreverGastoEmUsuarioDiffCallback()) {
+            GastoHomeAdapter.ViewHolder
+            >(GastoComIdDiffCallback()) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
@@ -23,33 +25,36 @@ class InscreverGastoEmUsuarioAdapter(val listener: InscreverGastoEmUsuarioListen
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        return ViewHolder.from(parent, listener)
+        return ViewHolder.from(parent)
     }
 
     class ViewHolder private constructor(
-        val binding: InscreverGastoEmUsuarioListItemBinding,
-        val listener: InscreverGastoEmUsuarioListener
+        val binding: GastoListItemHomeBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: GastoComId, position: Int) {
             binding.apply {
 
-                gastoNome.text = item.nomeGasto
-                matricula.text = item.matricula
-
-                ivAdd.setOnClickListener{
-                    listener.onAddClick(item)
+                txtNomeGasto.text = item.nomeGasto
+                txtCategoria.text = item.categoria
+                txtValorGasto.text = item.custo.toString()
+                var cor = ""
+                when (item.categoria) {
+                    "Lazer" -> cor = "#00cf67"
+                    "Educação" -> cor = "#3fe7ff"
+                    else -> cor = "FFFFFF"
                 }
+                corCategoria.setBackgroundColor(Color.parseColor(cor))
 
             }
         }
 
         companion object {
-            fun from(parent: ViewGroup, listener: InscreverGastoEmUsuarioListener): ViewHolder {
+            fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = InscreverGastoEmUsuarioListItemBinding.inflate(
+                val binding = GastoListItemHomeBinding.inflate(
                     layoutInflater, parent, false
                 )
-                return ViewHolder(binding, listener)
+                return ViewHolder(binding)
             }
         }
     }
@@ -57,7 +62,7 @@ class InscreverGastoEmUsuarioAdapter(val listener: InscreverGastoEmUsuarioListen
 }
 
 
-class InscreverGastoEmUsuarioDiffCallback : DiffUtil.ItemCallback<GastoComId>() {
+class GastoHomeDiffCallback : DiffUtil.ItemCallback<GastoComId>() {
 
     override fun areItemsTheSame(oldItem: GastoComId, newItem: GastoComId): Boolean {
         return oldItem.id == newItem.id
@@ -67,8 +72,3 @@ class InscreverGastoEmUsuarioDiffCallback : DiffUtil.ItemCallback<GastoComId>() 
         return oldItem == newItem
     }
 }
-
-
-interface InscreverGastoEmUsuarioListener {
-    fun onAddClick(gasto: GastoComId)
-}*/
