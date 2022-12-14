@@ -12,8 +12,8 @@
         android:title="COTAÇÃO"
         android:icon="@drawable/ic_baseline_currency_exchange_24" />
 
-    <item android:id="@+id/inserirRendaFragment"
+    <!--<item android:id="@+id/inserirRendaFragment"
         android:title="RENDA"
-        android:icon="@drawable/ic_baseline_attach_money_24"/>
+        android:icon="@drawable/ic_baseline_attach_money_24"/>-->
 
 </menu>
