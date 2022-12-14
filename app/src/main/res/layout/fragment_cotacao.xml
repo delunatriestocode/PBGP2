@@ -26,25 +26,6 @@
 
     </TextView>
 
-    <TextView
-        android:id="@+id/id_texto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/cot_list"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_cotacao"
-
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Teste"
-        android:textAlignment="center"
-        android:textColor="#F4F0ED"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        >
-
-    </TextView>
-
     <LinearLayout
         android:id="@+id/cot_list"
         android:layout_width="match_parent"
@@ -57,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintVertical_bias="0.35">
 
         <LinearLayout
             android:id="@+id/dolar_usa"
@@ -123,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="Libra: "
+                android:text="Libra Esterlina: "
                 android:textColor="#F4F0ED"
                 android:textSize="22sp" />
 

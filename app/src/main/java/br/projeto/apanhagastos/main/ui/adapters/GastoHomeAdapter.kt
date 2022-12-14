@@ -37,13 +37,13 @@ class GastoHomeAdapter() :
                 txtNomeGasto.text = item.nomeGasto
                 txtCategoria.text = item.categoria
                 txtValorGasto.text = item.custo.toString()
-                var cor = ""
+                /*var cor = ""
                 when (item.categoria) {
                     "Lazer" -> cor = "#00cf67"
                     "Educação" -> cor = "#3fe7ff"
                     else -> cor = "FFFFFF"
                 }
-                corCategoria.setBackgroundColor(Color.parseColor(cor))
+                corCategoria.setBackgroundColor(Color.parseColor(cor))*/
 
             }
         }
