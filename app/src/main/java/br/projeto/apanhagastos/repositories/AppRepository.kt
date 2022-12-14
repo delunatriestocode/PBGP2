@@ -1,9 +1,6 @@
 package br.projeto.apanhagastos.repositories
 
-import br.projeto.apanhagastos.models.Usuario
 import br.projeto.apanhagastos.models.Gasto
-import br.projeto.apanhagastos.models.GastoComId
-import br.projeto.apanhagastos.models.GastoEmUsuario
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -11,13 +8,9 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-
-
-const val TAG = "UsuariosFirebase"
 
 class AppRepository private constructor() {
 
@@ -30,8 +23,6 @@ class AppRepository private constructor() {
 
         lateinit var db: FirebaseFirestore
 
-        lateinit var colecaoUsuarios : CollectionReference
-
         lateinit var colecaoGastos : CollectionReference
 
         private var INSTANCE: AppRepository? = null
@@ -42,9 +33,6 @@ class AppRepository private constructor() {
             auth = Firebase.auth
             // Banco de dados Firestore
             db = Firebase.firestore
-
-            // Coleção de usuarios:
-            colecaoUsuarios = db.collection("usuarios")
 
             // Coleção de gastos:
             colecaoGastos = db.collection("gastos")
@@ -88,32 +76,7 @@ class AppRepository private constructor() {
         auth.signOut()
     }
 
-    // FireStore:
-
-    // Usuario:
-    fun cadastrarUsuario(usuario: Usuario): Task<DocumentReference> {
-        return colecaoUsuarios.add(usuario)
-    }
-
-    fun getUsuarios(): Task<QuerySnapshot> {
-        return colecaoUsuarios.get()
-    }
-
-    fun getUsuariosColecao(): CollectionReference {
-        return colecaoUsuarios
-    }
-
-    fun deleteUsuario(id: String) {
-        colecaoUsuarios.document(id).delete()
-    }
-
-    fun atualizaUsuario(id: String?, usuario: Usuario) {
-        if (id != null) {
-            colecaoUsuarios.document(id).set(usuario)
-        }
-    }
-
-    // Gastos:
+    // FireStore - Gastos:
 
     fun getGastosColecao(): CollectionReference {
         return colecaoGastos
@@ -131,18 +94,6 @@ class AppRepository private constructor() {
         if (id != null) {
             colecaoGastos.document(id).set(gasto)
         }
-    }
-
-    fun inscreverGastoEmUsuario(idUsuario: String, gastoComId: GastoComId){
-        val gastoEmUsuario = GastoEmUsuario(
-            nomeGasto = gastoComId.nomeGasto,
-            categoria = gastoComId.categoria,
-        )
-        colecaoUsuarios
-            .document(idUsuario)
-            .collection("gastos")
-            .document(gastoComId.id)
-            .set(gastoEmUsuario)
     }
 
 }
