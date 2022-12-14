@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import br.projeto.apanhagastos.databinding.FragmentCotacaoBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 
 import retrofit2.Call
 import retrofit2.Callback
@@ -30,6 +32,17 @@ class CotacaoFragment : Fragment() {
     }
 
     fun setup() {
+        getData()
+        setupAdMob()
+    }
+
+    private fun setupAdMob() {
+        MobileAds.initialize(requireContext()) {}
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
+    }
+
+    private fun getData() {
         getUSDtoBRL()
         getEURtoBRL()
         getGBPtoBRL()
@@ -40,7 +53,6 @@ class CotacaoFragment : Fragment() {
         getCNYtoBRL()
         getARStoBRL()
     }
-
 
 
     private fun getUSDtoBRL() {

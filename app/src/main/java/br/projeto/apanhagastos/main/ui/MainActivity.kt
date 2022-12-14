@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
 
     val viewModel by viewModels<MainViewModel>()
 
-    private var anuncioInter: InterstitialAd? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,38 +29,19 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        setupNavigationBottom()
+
+    }
+
+    private fun setupNavigationBottom() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navController = findNavController(R.id.fragment)
-
         bottomNavigationView.setupWithNavController(navController)
     }
 
 
-
-        //setupAdMob()
-//        setupNavigation()
 }
 
-//    private fun setupNavigation() {
-//
-//    }
-
-
-    /*private fun setupAdMob() {
-        MobileAds.initialize(this) {}
-        val adRequest = AdRequest.Builder().build()
-        binding.adView.loadAd(adRequest)
-    }
-
-
-    fun adViewClick(view: View) {
-        if (anuncioInter != null) {
-            anuncioInter?.show(this)
-        } else {
-            Log.d("INTERSTITIAL", "The interstitial ad wasn't ready yet.")
-        }
-    }
-    */
      
 
 
