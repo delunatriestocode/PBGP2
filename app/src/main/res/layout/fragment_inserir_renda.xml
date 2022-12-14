@@ -50,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/cor_login_background"
+        android:onClick="atualizarRenda"
         android:text="@string/ok"
         android:textColor="#F4F0ED"
         app:layout_constraintBottom_toBottomOf="parent"

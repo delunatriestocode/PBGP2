@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ok">ok</string>
-    <string name="apanha_gastos">Apanha Gastos</string>
-    <string name="sair">Sair</string>
-    <string name="renda_mensal">Renda Mensal</string>
-    <string name="valor_padrao_renda_mensal">R$ 00,00</string>
-    <string name="porcentagem_gastos">Porcentagem Gastos</string>
-    <string name="valor_porcentagem_de_gasto_padrao">0%</string>
 </resources>

@@ -1,18 +1,28 @@
 package br.projeto.apanhagastos.main.ui
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.commit
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import br.projeto.apanhagastos.R
 import br.projeto.apanhagastos.databinding.ActivityMainBinding
+import br.projeto.apanhagastos.databinding.FragmentInserirRendaBinding
+import br.projeto.apanhagastos.login.ui.LoginActivity
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity()/*, RendaMensalComunicador*/ {
 
     private lateinit var binding: ActivityMainBinding
     val viewModel by viewModels<MainViewModel>()
+    // private var anuncioInter: InterstitialAd? = null
 
 
 
@@ -22,15 +32,31 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        setupBottomNavigation()
-
-    }
-
-    fun setupBottomNavigation() {
+        // Bottom Navigation
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navController = findNavController(R.id.fragment)
         bottomNavigationView.setupWithNavController(navController)
+
+        // val bundle = "RENDA" to FragmentInserirRendaBinding.bind(view).inputRendaMensal
+
+
     }
+
+/*
+    var rendaAtual = 0.00
+    override fun pegarRenda(TextInputEditText: Double) {
+        rendaAtual = TextInputEditText
+    }
+*/
 
 
 }
+
+     
+
+
+
+
+
+
+

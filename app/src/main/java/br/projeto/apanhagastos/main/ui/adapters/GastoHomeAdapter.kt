@@ -14,7 +14,7 @@ class GastoHomeAdapter() :
     ListAdapter<
             GastoComId,
             GastoHomeAdapter.ViewHolder
-            >(GastoHomeDiffCallback()) {
+            >(GastoComIdDiffCallback()) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)

@@ -1,12 +1,15 @@
 package br.projeto.apanhagastos.api
 
+import android.app.Activity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import br.projeto.apanhagastos.databinding.FragmentCotacaoBinding
+import br.projeto.apanhagastos.main.ui.MainActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
@@ -25,7 +28,7 @@ class CotacaoFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View/*?*/ {
         _binding = FragmentCotacaoBinding.inflate(inflater, container, false)
         val view = binding.root
         setup()
@@ -38,7 +41,6 @@ class CotacaoFragment : Fragment() {
         setupAdMob()
     }
 
-    //  - Descobrir Error de config de API + terminar de aplicar a outras moedas
     private fun getData() {
         val retrofitClient = NetworkUtils
             .getRetrofitInstance("https://economia.awesomeapi.com.br/")
@@ -66,8 +68,6 @@ class CotacaoFragment : Fragment() {
         val adRequest = AdRequest.Builder().build()
         binding.adView.loadAd(adRequest)
     }
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

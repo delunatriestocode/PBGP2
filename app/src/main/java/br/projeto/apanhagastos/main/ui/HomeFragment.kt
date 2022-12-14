@@ -1,5 +1,6 @@
 package br.projeto.apanhagastos.main.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,6 +22,8 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
+    var rendaMensal: String? = ""
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -37,9 +40,30 @@ class HomeFragment : Fragment() {
         setupClickListeners()
         setupObservers()
         setupRecyclerView()
-        //  - Levar Renda Mensal de InserirRendaFragment para Home
-        //  - Calcular e mostrar porcentagem de Gastos sob Renda Mensal
         // setupViews()
+    }
+
+/*
+    // Verifica se o arquivo pai contem a interface
+    private lateinit var listener: RendaMensalComunicador
+    override fun onAttach(context: Context) {
+        if (context is RendaMensalComunicador) {
+            listener = context
+        }
+        super.onAttach(context)
+    }
+*/
+
+/*
+    private fun setupViews() {
+        val renda = requireArguments().getDouble("")
+    }
+*/
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun setupRecyclerView() {
@@ -76,9 +100,5 @@ class HomeFragment : Fragment() {
         activity?.finish()
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 
 }
