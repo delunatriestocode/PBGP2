@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cor_main_background">
@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/textView_inserir_renda_mensal"
+        android:text="Por favor, insira sua renda mensal "
         android:textColor="#F4F0ED"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +38,7 @@
             android:id="@+id/input_renda_mensal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/botao_inserir_renda"
+            android:hint="Renda"
             android:inputType="numberDecimal" />
 
 

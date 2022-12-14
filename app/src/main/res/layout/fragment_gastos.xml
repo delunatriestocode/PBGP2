@@ -23,7 +23,7 @@
         android:layout_gravity="center"
         android:layout_marginHorizontal="8dp"
         android:backgroundTint="@color/cor_login_background"
-        android:text="@string/btn_cadastrar_novo_gasto"
+        android:text="Cadastrar Novo Gasto"
         android:textColor="@color/cor_base_texto_backgrond_textbox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/criar_novo_gasto"
+        android:text="Criar "
         android:textAlignment="center"
         android:textColor="@color/cor_base_texto_backgrond_textbox"
         android:textSize="24sp"
@@ -36,7 +36,7 @@
             android:id="@+id/input_nome_gasto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/nome_do_novo_gasto"
+            android:hint="Nome do Gasto"
             android:textColor="@color/black"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -58,9 +58,9 @@
             android:id="@+id/input_valor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/input_valor_novo_gasto"
-            android:inputType="numberDecimal"
             android:textColor="@color/black"
+            android:hint="Valor"
+            android:inputType="numberDecimal"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,7 +72,6 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:hint="@string/selecione_categoria"
-        android:labelFor="@id/input_categoria"
         android:textColorHint="@color/cor_texto_dentro_das_caixas_de_texto"
         app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox"
         app:layout_constraintBottom_toTopOf="@+id/btn_cadastrar"
@@ -84,8 +83,8 @@
             android:id="@+id/input_categoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
             android:textColor="@color/black"
+            android:inputType="none"
             android:textSize="18sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -98,7 +97,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/cor_botoes_login_e_cadastro"
-        android:text="@string/cadastrar_novo_gasto"
+        android:text="Cadastrar"
         android:textColor="@color/cor_base_texto_backgrond_textbox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

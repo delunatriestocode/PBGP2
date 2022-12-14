@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="2dp"
             android:gravity="center"
-            android:text="@string/nome_padrao_categoria"
+            android:text="Categoria"
             android:textColor="@color/cor_categoria_texto"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -37,12 +37,13 @@
 
         <TextView
             android:id="@+id/txt_valor_gasto"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="8dp"
             android:layout_weight="1"
-            android:text="@string/valor_padrao_item_gasto_list"
+            android:text="R$ ???,??"
             android:textAlignment="center"
+
             android:textColor="@color/cor_texto_gasto_item"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -76,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="@string/nome_padrao_gasto"
+            android:text="Nome gasto"
             android:textAlignment="center"
             android:textColor="@color/cor_texto_gasto_item"
             android:textSize="14sp" />
