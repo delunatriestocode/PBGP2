@@ -81,7 +81,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:inputType="none"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:ignore="LabelFor" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -93,7 +94,7 @@
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="48dp"
             android:backgroundTint="@color/cor_botoes_login_e_cadastro"
-            android:text="Atualizar"
+            android:text="@string/btn_atualizar_gasto"
             android:textColor="@color/cor_base_texto_backgrond_textbox" />
 
 

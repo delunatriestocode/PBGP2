@@ -43,12 +43,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btn_entrar"
+        android:id="@+id/btn_atualizar_renda_mensal"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/cor_login_background"
-        android:text="ok"
+        android:text="@string/btn_atualizar_renda_mensal"
         android:textColor="#F4F0ED"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

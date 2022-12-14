@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cadastrar_novo_gasto">Cadastrar Novo Gasto</string>
+    <string name="btn_atualizar_renda_mensal">Atualizar</string>
+    <string name="btn_atualizar_gasto">Atualizar</string>
+</resources>

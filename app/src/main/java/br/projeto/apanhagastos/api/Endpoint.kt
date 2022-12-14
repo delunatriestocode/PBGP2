@@ -9,35 +9,38 @@ interface Endpoint {
     fun getUSDtoBRL() : Call<List<Moeda>>
 
     // Euro
-    @GET("last/EUR-BRL")
+    @GET("daily/EUR-BRl/1")
     fun getEURtoBRL() : Call<List<Moeda>>
 
     // Libra Esterlina
-    @GET("last/GBP-BRL")
+    @GET("daily/GBP-BRl/1")
     fun getGBPtoBRL() : Call<List<Moeda>>
 
     // Iene Japonês
-    @GET("last/JPY-BRL")
+    @GET("daily/JPY-BRl/1")
     fun getJPYtoBRL() : Call<List<Moeda>>
 
     // Dólar Australiano
-    @GET("last/AUD-BRL")
+    @GET("daily/AUD-BRl/1")
     fun getAUDtoBRL() : Call<List<Moeda>>
 
     // Franco Suíço
-    @GET("last/CHF-BRL")
+    @GET("daily/CHF-BRl/1")
     fun getCHFtoBRL() : Call<List<Moeda>>
 
     // Dólar Canadense
-    @GET("last/CAD-BRL")
+    @GET("daily/CAD-BRl/1")
     fun getCADtoBRL() : Call<List<Moeda>>
 
     // Yuan Chinês
-    @GET("last/CNY-BRL")
+    @GET("daily/CNY-BRl/1")
     fun getCNYtoBRL() : Call<List<Moeda>>
 
     // Peso Argentino
-    @GET("last/ARS-BRL")
+    @GET("daily/ARS-BRl/1")
     fun getARStoBRL() : Call<List<Moeda>>
+
+
+
 
 }

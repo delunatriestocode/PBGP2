@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="R$ ???,??"
+                android:text="R$ "
                 android:textColor="#F4F0ED"
                 android:textSize="22sp" />
         </LinearLayout>
@@ -87,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="R$ ???,??"
+                android:text="R$ "
                 android:textColor="#F4F0ED"
                 android:textSize="22sp" />
         </LinearLayout>
@@ -113,7 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="R$ ???,??"
+                android:text="R$ "
                 android:textColor="#F4F0ED"
                 android:textSize="22sp" />
         </LinearLayout>
@@ -139,7 +139,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="R$ ???,??"
+                android:text="R$ "
                 android:textColor="#F4F0ED"
                 android:textSize="22sp" />
         </LinearLayout>
@@ -165,7 +165,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="R$ ???,??"
+                android:text="R$ "
                 android:textColor="#F4F0ED"
                 android:textSize="22sp" />
         </LinearLayout>
@@ -191,7 +191,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="R$ ???,??"
+                android:text="R$ "
                 android:textColor="#F4F0ED"
                 android:textSize="22sp" />
         </LinearLayout>
@@ -217,7 +217,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="R$ ???,??"
+                android:text="R$ "
                 android:textColor="#F4F0ED"
                 android:textSize="22sp" />
         </LinearLayout>
@@ -243,7 +243,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="R$ ???,??"
+                android:text="R$ "
                 android:textColor="#F4F0ED"
                 android:textSize="22sp" />
         </LinearLayout>
@@ -269,7 +269,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="R$ ???,??"
+                android:text="R$ "
                 android:textColor="#F4F0ED"
                 android:textSize="22sp" />
         </LinearLayout>

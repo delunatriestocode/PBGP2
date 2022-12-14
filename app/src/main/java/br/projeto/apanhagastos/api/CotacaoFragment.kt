@@ -30,10 +30,37 @@ class CotacaoFragment : Fragment() {
     }
 
     fun setup() {
-        getData()
+        getUSDtoBRL()
+
+
     }
 
-    private fun getData() {
+    /*              binding.cotLibra.text = binding.cotLibra.text.toString().plus(it.bid)
+                    binding.cotIene.text = binding.cotIene.text.toString().plus(it.bid)
+                    binding.cotDolarAus.text = binding.cotDolarAus.text.toString().plus(it.bid)
+                    binding.cotFranSui.text = binding.cotFranSui.text.toString().plus(it.bid)
+                    binding.cotDolarCan.text = binding.cotDolarCan.text.toString().plus(it.bid)
+                    binding.cotYuan.text = binding.cotYuan.text.toString().plus(it.bid)
+                    binding.cotPesoArg.text = binding.cotPesoArg.text.toString().plus(it.bid)*/
+
+    private fun getEURtoBRL() {
+        val retrofitClient = NetworkUtils
+            .getRetrofitInstance("https://economia.awesomeapi.com.br/")
+
+        val endpoint = retrofitClient.create(Endpoint::class.java)
+        val callback = endpoint.getEURtoBRL()
+
+        callback.enqueue(object : Callback<List<Moeda>> {
+            override fun onFailure(call: Call<List<Moeda>>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message, Toast.LENGTH_SHORT).show()
+            }
+            override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
+                response.body()?.forEach{
+                    binding.cotEuro.text = binding.cotEuro.text.toString().plus(it.bid)                }
+            }
+        })
+    }
+    private fun getUSDtoBRL() {
         val retrofitClient = NetworkUtils
             .getRetrofitInstance("https://economia.awesomeapi.com.br/")
 
@@ -47,13 +74,137 @@ class CotacaoFragment : Fragment() {
             override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
                 response.body()?.forEach{
                     binding.cotDolarUsa.text = binding.cotDolarUsa.text.toString().plus(it.bid)
-
-
-
                 }
             }
         })
     }
+    private fun getUSDtoBRL() {
+        val retrofitClient = NetworkUtils
+            .getRetrofitInstance("https://economia.awesomeapi.com.br/")
+
+        val endpoint = retrofitClient.create(Endpoint::class.java)
+        val callback = endpoint.getUSDtoBRL()
+
+        callback.enqueue(object : Callback<List<Moeda>> {
+            override fun onFailure(call: Call<List<Moeda>>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message, Toast.LENGTH_SHORT).show()
+            }
+            override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
+                response.body()?.forEach{
+                    binding.cotDolarUsa.text = binding.cotDolarUsa.text.toString().plus(it.bid)
+                }
+            }
+        })
+    }
+    private fun getUSDtoBRL() {
+        val retrofitClient = NetworkUtils
+            .getRetrofitInstance("https://economia.awesomeapi.com.br/")
+
+        val endpoint = retrofitClient.create(Endpoint::class.java)
+        val callback = endpoint.getUSDtoBRL()
+
+        callback.enqueue(object : Callback<List<Moeda>> {
+            override fun onFailure(call: Call<List<Moeda>>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message, Toast.LENGTH_SHORT).show()
+            }
+            override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
+                response.body()?.forEach{
+                    binding.cotDolarUsa.text = binding.cotDolarUsa.text.toString().plus(it.bid)
+                }
+            }
+        })
+    }
+    private fun getUSDtoBRL() {
+        val retrofitClient = NetworkUtils
+            .getRetrofitInstance("https://economia.awesomeapi.com.br/")
+
+        val endpoint = retrofitClient.create(Endpoint::class.java)
+        val callback = endpoint.getUSDtoBRL()
+
+        callback.enqueue(object : Callback<List<Moeda>> {
+            override fun onFailure(call: Call<List<Moeda>>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message, Toast.LENGTH_SHORT).show()
+            }
+            override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
+                response.body()?.forEach{
+                    binding.cotDolarUsa.text = binding.cotDolarUsa.text.toString().plus(it.bid)
+                }
+            }
+        })
+    }
+    private fun getUSDtoBRL() {
+        val retrofitClient = NetworkUtils
+            .getRetrofitInstance("https://economia.awesomeapi.com.br/")
+
+        val endpoint = retrofitClient.create(Endpoint::class.java)
+        val callback = endpoint.getUSDtoBRL()
+
+        callback.enqueue(object : Callback<List<Moeda>> {
+            override fun onFailure(call: Call<List<Moeda>>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message, Toast.LENGTH_SHORT).show()
+            }
+            override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
+                response.body()?.forEach{
+                    binding.cotDolarUsa.text = binding.cotDolarUsa.text.toString().plus(it.bid)
+                }
+            }
+        })
+    }
+    private fun getUSDtoBRL() {
+        val retrofitClient = NetworkUtils
+            .getRetrofitInstance("https://economia.awesomeapi.com.br/")
+
+        val endpoint = retrofitClient.create(Endpoint::class.java)
+        val callback = endpoint.getUSDtoBRL()
+
+        callback.enqueue(object : Callback<List<Moeda>> {
+            override fun onFailure(call: Call<List<Moeda>>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message, Toast.LENGTH_SHORT).show()
+            }
+            override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
+                response.body()?.forEach{
+                    binding.cotDolarUsa.text = binding.cotDolarUsa.text.toString().plus(it.bid)
+                }
+            }
+        })
+    }
+    private fun getUSDtoBRL() {
+        val retrofitClient = NetworkUtils
+            .getRetrofitInstance("https://economia.awesomeapi.com.br/")
+
+        val endpoint = retrofitClient.create(Endpoint::class.java)
+        val callback = endpoint.getUSDtoBRL()
+
+        callback.enqueue(object : Callback<List<Moeda>> {
+            override fun onFailure(call: Call<List<Moeda>>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message, Toast.LENGTH_SHORT).show()
+            }
+            override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
+                response.body()?.forEach{
+                    binding.cotDolarUsa.text = binding.cotDolarUsa.text.toString().plus(it.bid)
+                }
+            }
+        })
+    }
+    private fun getUSDtoBRL() {
+        val retrofitClient = NetworkUtils
+            .getRetrofitInstance("https://economia.awesomeapi.com.br/")
+
+        val endpoint = retrofitClient.create(Endpoint::class.java)
+        val callback = endpoint.getUSDtoBRL()
+
+        callback.enqueue(object : Callback<List<Moeda>> {
+            override fun onFailure(call: Call<List<Moeda>>, t: Throwable) {
+                Toast.makeText(requireContext(), t.message, Toast.LENGTH_SHORT).show()
+            }
+            override fun onResponse(call: Call<List<Moeda>>, response: Response<List<Moeda>>){
+                response.body()?.forEach{
+                    binding.cotDolarUsa.text = binding.cotDolarUsa.text.toString().plus(it.bid)
+                }
+            }
+        })
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

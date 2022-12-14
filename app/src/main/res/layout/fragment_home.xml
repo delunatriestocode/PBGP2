@@ -25,7 +25,7 @@
         app:layout_constraintHorizontal_bias="1.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.025" />
 
     <Button
         android:id="@+id/btn_sair"
@@ -44,7 +44,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_gastos_home"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="460dp"
+        android:background="#1F7478"
         android:layout_marginHorizontal="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +62,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rv_gastos_home"
-        app:layout_constraintVertical_bias="0.6">
+        app:layout_constraintVertical_bias="0.4">
 
         <TextView
             android:id="@+id/txt_renda"
@@ -80,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_weight="1"
-            android:text="R$ rrr,rr"
+            android:text="R$ 000,00"
             android:textAlignment="center"
             android:textColor="#E0E0E0"
             android:textSize="18sp" />
@@ -103,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_weight="1"
-            android:text="ppp%"
+            android:text="0%"
             android:textAlignment="center"
             android:textColor="#E0E0E0"
             android:textSize="18sp" />
