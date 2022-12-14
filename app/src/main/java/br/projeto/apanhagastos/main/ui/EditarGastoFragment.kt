@@ -40,6 +40,11 @@ class EditarGastoFragment : Fragment() {
         _binding = FragmentEditarGastoBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        val categorias = resources.getStringArray(R.array.categorias)
+        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.categoria_list_item, categorias)
+        binding.inputCategoria.setAdapter(arrayAdapter)
+
+
         setup()
         return view
     }
@@ -57,8 +62,8 @@ class EditarGastoFragment : Fragment() {
     }
 
     private fun onAtualizarClick() {
-        val gasto = getGastoFromInputs()
-        viewModel.atualizaGasto(gasto)
+        val aluno = getGastoFromInputs()
+        viewModel.atualizaGasto(aluno)
         navUp()
     }
 

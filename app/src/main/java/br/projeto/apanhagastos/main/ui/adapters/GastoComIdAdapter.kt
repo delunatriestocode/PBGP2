@@ -1,6 +1,5 @@
 package br.projeto.apanhagastos.main.ui.adapters
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -37,18 +36,7 @@ class GastoComIdAdapter(val listener: GastoComIdListener) :
                 txtNomeGasto.text = item.nomeGasto
                 txtCategoria.text = item.categoria
                 txtValorGasto.text = item.custo.toString()
-                var cor = ""
-                when (item.categoria) {
-                    "Saúde" -> cor = "#5EFF3F"
-                    "Educação" -> cor = "#3FE7FF"
-                    "Lazer" -> cor = "#00CF67"
-                    "Mercado" -> cor = "#FF6E00"
-                    "Alimentação" -> cor = "#FFA324"
-                    "Contas" -> cor = "#0BB3FF"
-                    "Dívidas" -> cor = "#FF3300"
-                    else -> cor = "BEBEBE"
-                }
-                corCategoria.setBackgroundColor(Color.parseColor(cor))
+
                 ivEdit.setOnClickListener {
                     listener.onEditClick(item)
                 }

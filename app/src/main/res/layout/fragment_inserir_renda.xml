@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cor_main_background">
@@ -22,22 +21,21 @@
         app:layout_constraintVertical_bias="0.15" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
-        android:textColorHint="@color/cor_texto_dentro_das_caixas_de_texto"
-        app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3">
+        app:layout_constraintVertical_bias="0.3"
+        android:textColorHint="@color/cor_texto_dentro_das_caixas_de_texto"
+        app:boxBackgroundColor="@color/cor_base_texto_backgrond_textbox">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input_renda_mensal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
             android:hint="Renda"
             android:inputType="numberDecimal" />
 
@@ -45,13 +43,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btn_atualizar_renda"
+        android:id="@+id/btn_entrar"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/cor_login_background"
-        android:onClick="atualizarRenda"
-        android:text="@string/ok"
+        android:text="ok"
         android:textColor="#F4F0ED"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

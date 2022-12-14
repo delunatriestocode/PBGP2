@@ -1,18 +1,12 @@
 package br.projeto.apanhagastos.api
 
-import android.app.Activity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import br.projeto.apanhagastos.databinding.FragmentCotacaoBinding
-import br.projeto.apanhagastos.main.ui.MainActivity
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.interstitial.InterstitialAd
 
 import retrofit2.Call
 import retrofit2.Callback
@@ -22,7 +16,6 @@ class CotacaoFragment : Fragment() {
 
     private var _binding: FragmentCotacaoBinding? = null
     private val binding get() = _binding!!
-    private var anuncioInter: InterstitialAd? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,7 +31,6 @@ class CotacaoFragment : Fragment() {
 
     fun setup() {
         getData()
-        setupAdMob()
     }
 
     private fun getData() {
@@ -62,16 +54,5 @@ class CotacaoFragment : Fragment() {
         })
     }
 
-
-    private fun setupAdMob() {
-        MobileAds.initialize(requireContext()) {}
-        val adRequest = AdRequest.Builder().build()
-        binding.adView.loadAd(adRequest)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 
 }

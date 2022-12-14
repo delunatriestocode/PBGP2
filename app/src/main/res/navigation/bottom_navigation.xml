@@ -39,12 +39,7 @@
         tools:layout="@layout/fragment_cadastrar_gasto"/>
     <fragment
         android:id="@+id/inserirRendaFragment"
-        android:name="br.projeto.apanhagastos.main.ui.InserirRendaFragment"
+        android:name="br.projeto.apanhagastos.InserirRendaFragment"
         android:label="InserirRendaFragment"
-        tools:layout="@layout/fragment_inserir_renda">
-        <argument
-            android:name="renda"
-            app:argType="double"
-            android:defaultValue="0.00" />
-    </fragment>
+        tools:layout="@layout/fragment_inserir_renda"/>
 </navigation>
