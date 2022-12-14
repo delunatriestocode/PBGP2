@@ -1,10 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ok">ok</string>
+    <string name="app_name">Apanha Gastos</string>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="login">Login</string>
+    <string name="e_mail">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="nao_tenho_conta">Não tenho conta</string>
+    <string name="sign_on">Cadastro</string>
+    <string name="name">Nome Completo</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="tenho_conta">Já tenho uma conta!</string>
+    <string name="confirme_senha">Confirme Senha</string>
+    <string name="categoria">Categoria</string>
+    <string name="selecione_categoria">Selecione a Categoria</string>
+
+
+    <string-array name="categorias">
+        <item>Saúde</item>
+        <item>Educação</item>
+        <item>Lazer</item>
+        <item>Mercado</item>
+        <item>Alimentação</item>
+        <item>Contas</item>
+        <item>Dívidas</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_add_gasto">Add Gasto</string>
+    <string name="menu_edit_renda">Editar Renda</string>
+    <string name="menu_cotacao">Cotação</string>
+    <string name="logout">Logout</string>
+
+    <string name="ok">OK</string>
     <string name="apanha_gastos">Apanha Gastos</string>
     <string name="sair">Sair</string>
     <string name="renda_mensal">Renda Mensal</string>
     <string name="valor_padrao_renda_mensal">R$ 00,00</string>
     <string name="porcentagem_gastos">Porcentagem Gastos</string>
     <string name="valor_porcentagem_de_gasto_padrao">0%</string>
+    <string name="home">HOME</string>
+    <string name="gastos">GASTOS</string>
+    <string name="cota_o">COTAÇÃO</string>
+    <string name="renda">RENDA</string>
+    <string name="valor_padrao_item_gasto_list">R$ 000,00</string>
+    <string name="nome_padrao_gasto">Nome gasto</string>
+    <string name="nome_padrao_categoria">Categoria</string>
+    <string name="botao_inserir_renda">Renda</string>
+    <string name="textView_inserir_renda_mensal">Por favor, insira sua renda mensal</string>
+    <string name="btn_cadastrar_novo_gasto">Cadastrar Novo Gasto</string>
+    <string name="text_view_editar">Editar</string>
+    <string name="input_nome_do_gasto">Nome do Gasto</string>
+    <string name="input_valor_gasto">Valor</string>
+    <string name="btn_atualizar_gasto">Atualizar</string>
+    <string name="criar_novo_gasto">Criar</string>
+    <string name="nome_do_novo_gasto">Nome do Gasto</string>
+    <string name="input_valor_novo_gasto">Valor</string>
+    <string name="cadastrar_novo_gasto">Cadastrar</string>
+
 </resources>

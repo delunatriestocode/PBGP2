@@ -52,14 +52,31 @@
     <string name="menu_edit_renda">Editar Renda</string>
     <string name="menu_cotacao">Cotação</string>
     <string name="logout">Logout</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="ok">ok</string>
+
+    <string name="ok">OK</string>
     <string name="apanha_gastos">Apanha Gastos</string>
     <string name="sair">Sair</string>
     <string name="renda_mensal">Renda Mensal</string>
     <string name="valor_padrao_renda_mensal">R$ 00,00</string>
     <string name="porcentagem_gastos">Porcentagem Gastos</string>
     <string name="valor_porcentagem_de_gasto_padrao">0%</string>
+    <string name="home">HOME</string>
+    <string name="gastos">GASTOS</string>
+    <string name="cota_o">COTAÇÃO</string>
+    <string name="renda">RENDA</string>
+    <string name="valor_padrao_item_gasto_list">R$ 000,00</string>
+    <string name="nome_padrao_gasto">Nome gasto</string>
+    <string name="nome_padrao_categoria">Categoria</string>
+    <string name="botao_inserir_renda">Renda</string>
+    <string name="textView_inserir_renda_mensal">Por favor, insira sua renda mensal</string>
+    <string name="btn_cadastrar_novo_gasto">Cadastrar Novo Gasto</string>
+    <string name="text_view_editar">Editar</string>
+    <string name="input_nome_do_gasto">Nome do Gasto</string>
+    <string name="input_valor_gasto">Valor</string>
+    <string name="btn_atualizar_gasto">Atualizar</string>
+    <string name="criar_novo_gasto">Criar</string>
+    <string name="nome_do_novo_gasto">Nome do Gasto</string>
+    <string name="input_valor_novo_gasto">Valor</string>
+    <string name="cadastrar_novo_gasto">Cadastrar</string>
 
 </resources>

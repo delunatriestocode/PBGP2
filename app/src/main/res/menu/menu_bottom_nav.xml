@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/homeFragment"
-        android:title="HOME"
+        android:title="@string/home"
         android:icon="@drawable/ic_baseline_home_24" />
 
     <item android:id="@+id/gastosFragment"
-        android:title="GASTOS"
+        android:title="@string/gastos"
         android:icon="@drawable/ic_baseline_money_off_24" />
 
     <item android:id="@+id/cotacaoFragment"
-        android:title="COTAÇÃO"
+        android:title="@string/cota_o"
         android:icon="@drawable/ic_baseline_currency_exchange_24" />
 
     <item android:id="@+id/inserirRendaFragment"
-        android:title="RENDA"
+        android:title="@string/renda"
         android:icon="@drawable/ic_baseline_attach_money_24"/>
 
 </menu>
